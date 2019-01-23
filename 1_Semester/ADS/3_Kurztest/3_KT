@@ -1,0 +1,10 @@
+\documentclass{article}
+\usepackage{pdfpages}
+
+\begin{document}
+	\includepdf[pages=-]{ads-ws18-vl14.pdf}
+	\includepdf[pages=-]{ads-ws18-vl15.pdf}
+	\includepdf[pages=-]{ads-ws18-vl16.pdf}
+	\includepdf[pages=-]{ads-ws18-vl17.pdf}
+	\includepdf[pages=-]{ads-ws18-vl18.pdf}
+\end{document}
