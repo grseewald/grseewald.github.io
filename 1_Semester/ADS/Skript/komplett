@@ -1,0 +1,30 @@
+\documentclass[]{article}
+\usepackage{pdfpages}
+
+\begin{document}
+	\includepdf[pages=-]{01.pdf}
+	\includepdf[pages=-]{02.pdf}
+	\includepdf[pages=-]{03.pdf}
+	\includepdf[pages=-]{04.pdf}
+	\includepdf[pages=-]{05.pdf}
+	\includepdf[pages=-]{06.pdf}
+	\includepdf[pages=-]{07.pdf}
+	\includepdf[pages=-]{08.pdf}
+	\includepdf[pages=-]{09.pdf}
+	\includepdf[pages=-]{10.pdf}
+	\includepdf[pages=-]{11.pdf}
+	\includepdf[pages=-]{12.pdf}
+	\includepdf[pages=-]{13.pdf}
+	\includepdf[pages=-]{14.pdf}
+	\includepdf[pages=-]{15.pdf}
+	\includepdf[pages=-]{16.pdf}
+	\includepdf[pages=-]{17.pdf}
+	\includepdf[pages=-]{18.pdf}
+	\includepdf[pages=-]{19.pdf}
+	\includepdf[pages=-]{20.pdf}
+	\includepdf[pages=-]{21.pdf}
+	\includepdf[pages=-]{22.pdf}
+	\includepdf[pages=-]{23.pdf}
+	\includepdf[pages=-]{24.pdf}
+	\includepdf[pages=-]{25.pdf}
+\end{document}
