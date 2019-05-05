@@ -1,0 +1,25 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+\begin{document}
+	\section{Aufgabe 1}
+		$x_n=(1+(-1)^n)\frac{n+1}{n}+(-1)^n$\\
+		Zunächst gilt für $n=2k$\\
+		(d.h. n ist gerade)\\
+		$x_{2k}=(1+(-1)^(2k))^{\frac{2k+1}{2k}}+(-1)^{2k}$\\
+		$=2^{1+\frac{1}{2k}}+1\stackrel{k\to\inf}{\rightarrow}3$, d.h 3 ist HP von $(x_n)$\\
+		Für $n=2k+1$(d.h. $n$ ist ungerade) gilt\\
+		$x_{2k+1}=(1+(-1)^{2k+1})^{\frac{2k+2}{2k+1}}+(-1)^{2k+1}=-1\stackrel{k\to\inf}{\rightarrow}-1$, d.h. $-1$ ist auch HP von $(x_n)$.\\
+		Wir zeigen noch, dass es außer 3 und -1 keine weiteren HPe gibt.\\
+		Es sei a irgendein HP von $(x_n)$. Dann gibt es eine Teilfolge $(x_{n_k})_k$ von $(x_n)$, die gegen a konvergiert. Besteht $(n_k)$ aus unendlich vielen geraden Zahlen, so gibt es eine Teilfolge $(x_{n_{k_l}})_l$ von $(x_{n_k})$ mit geraden Indizes, d.h. $(x_{n_{k_l}})$ ist eine Teilfolge von $(x_2k)$ und konvergiert daher gegen 3. Also folgt $a=3$. Andernfalls besteht $(n_k)$ fast nur aus ungeraden Zahlen und es gibt eine Teilfolge $(x_{n_{k_j}})_j$ von $(x_{n_k})$ mit nur ungeraden Indizes. Analog folgt in diesem Fall $a=1$.
+	\section{Aufgabe 2}  
+		Es sei $q=\frac{m}{l}$ für $m\in\mathbb{Z}$ und $l \in \mathbb{N}$.\\
+		$\Rightarrow nq=\frac{nm}{l}=\frac{k_n\cdot l+r_n}{l}=k_n+\frac{r_n}{l}$\\
+		$\floor{nq}$
+\end{document}
