@@ -1,0 +1,53 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{xfrac}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\pagestyle{fancy}
+\fancyhf[HR]{Lukas Vormwald, Gregor Seewald}
+\fancyhf[HL]{Übung: Dienstag 14:00}
+
+\title{Rechenanlagen - Übungsblatt 2}
+\author{Lukas Vormwald \and Noah Mehling \and Gregor Seewald}
+\date{Übung: Dienstag 14:00}
+\begin{document}
+	\maketitle
+	\section*{Aufgabe 2.1}
+		\begin{enumerate}[a)]
+			\item $R^i$ ist die Menge aller Knoten, die in einem Radius von $i-Verbindungen$ vom Startknoten aus liegen.\\
+			$R^*$ ist die Menge aller Knoten-Tupel die vom Startknoten erreichbar sind.
+			\item $n=3$, da wenn man von Knoten $7,8,9$ startet, nur drei Tupel möglich sind:$\left\lbrace(7,8),(8,9),(9,7) \right\rbrace$
+			\item Diese Relation beschreibt die Tupel, die in der Teilmenge C verbunden sind und die leere Verbindung.\\
+			Die Menge $\left\lbrace(7,8),(8,9),(9,7) \right\rbrace$ bildet eine Äquivalenzrelation.\\
+			\begin{itemize}
+				\item Reflexivität: Da die leere Verbindung eine Verbindung eines Knotens auf sich selbst definiert ist, ist die Reflexivität gegeben.
+				\item Transitivität: Aus der Definition von $R^i$ folgt, dass Knoten, die über einen anderen Knoten verbunden sind ebenfalls verbunden sind, somit gilt:$a\rightarrow b, b\rightarrow c, a \Rightarrow c$
+				\item Symmetrie: Die angegebene Menge ist ein Ring aus Verbindungen, daher erreicht man über Umwege immer wieder das Ausgangselement.
+			\end{itemize}
+		\end{enumerate}
+	\section*{Aufgabe 2.2}
+		\begin{enumerate}[a)]
+			\item wähle $a=01$ und $b=11$. Ohne führende Nullen gelesen ist der Text $"11"$ sowohl als $"aa"$ als auch als $"b"$ interpretierbar und somit nicht eindeutig, also auch keine Codierung.
+			\item Da $0^x$ immer $0$ ist (für $x>0$) ist diese Abbildung immer eine Abbildung auf $0$ für $a_0 ... a_{n-2}$ und somit ebenfalls nicht eindeutig definiert. 
+		\end{enumerate}\newpage
+	\section*{Aufgabe 2.3}
+		\begin{tabular}{|c|c|c|c|c|c|c|}
+			\hline
+			&kein Verband&nicht distributiv&nicht komplementär&\begin{tabular}{c}
+			weder distributiv\\
+			noch komplementär
+			\end{tabular}&inf&sup\\
+			\hline\hline
+			1.&X&$\surd$&X&X&a&e\\
+			\hline
+			2.&X&&$\surd$&&a&e\\
+			\hline
+			3.&$\surd$&&&&&\\
+			\hline
+		\end{tabular}
+\end{document}
