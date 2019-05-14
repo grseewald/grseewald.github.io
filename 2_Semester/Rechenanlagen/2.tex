@@ -8,8 +8,9 @@
 \usepackage{xfrac}
 \usepackage{amssymb}
 \usepackage{mathtools}
+\usepackage{marvosym}
 \pagestyle{fancy}
-\fancyhf[HR]{Lukas Vormwald, Gregor Seewald}
+\fancyhf[HR]{Lukas Vormwald, Noah Mehling, Gregor Seewald}
 \fancyhf[HL]{Übung: Dienstag 14:00}
 
 \title{Rechenanlagen - Übungsblatt 2}
@@ -43,11 +44,19 @@
 			noch komplementär
 			\end{tabular}&inf&sup\\
 			\hline\hline
-			1.&X&$\surd$&X&X&a&e\\
+			1.&X&$\surd$&$\surd$&$\surd$&a&e\\
 			\hline
-			2.&X&&$\surd$&&a&e\\
+			2.&X&X&$\surd$&X&a&e\\
 			\hline
 			3.&$\surd$&&&&&\\
 			\hline
 		\end{tabular}
+		\begin{enumerate}[1.]
+			\item $c \vee \left(b\cdot d\right)= \left(c\vee b\right)\cdot\left(c\vee d\right)$\\
+			$c\vee a = a\cdot d$\\
+			$c=d \Rightarrow$ nicht distributiv.\\
+			e hat kein Komplement, da $inf(e,\bar{e})$ immer $\bar{e}$ ist und nicht $0$ $\Rightarrow$ nicht komplementär.
+			\item e hat kein Komplement, da $inf(e,\bar{e})$ immer $\bar{e}$ ist und nicht $0$ $\Rightarrow$ nicht komplementär.
+			\item $sup(b,d)$ existiert nicht $\Rightarrow$ kein Verband 
+		\end{enumerate}
 \end{document}
