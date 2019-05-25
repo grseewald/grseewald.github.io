@@ -49,13 +49,25 @@
 	\section*{Aufgabe 3}
 		Angenommen $x \geq y \Rightarrow$ Kein Betrag an $\ln$ , da positiv\\
 		$\Rightarrow$\\
-		\begin{equation*}
-			\ln \frac{1 + e^x }{1+ e^y} \leq 
-		\end{equation*}
+			\begin{align*}
+				\ln \frac{1 + e^x }{1+ e^y} &\leq x-y \\
+				\frac{1 + e^x }{1+ e^y} &\leq e^{x-y} \\
+				1 + e^x &\leq \left( e^{x-y} \right) \left( 1 + e^y \right)\\
+				&\leq e^{x-y} + e^x\\
+				&\geq 1
+			\end{align*}
+		ist $y > x$, so ist 
+			\begin{equation*}
+				\abs{ \ln \frac{1 + e^x }{1+ e^y} } = \abs{ \left( \ln \left( 1 + e^x\right) \right) - \left( \ln \left( 1 + e^y \right) \right)} = \abs{ \left( \ln \left( 1 + e^y \right) \right) - \left( \ln \left( 1 + e^x\right) \right)}
+			\end{equation*}
 	\section*{Aufgabe 4}
 		
 	\section*{Aufgabe 5}
-		
+		$\ln \left( 1 + h \right) = \ln 1 + \frac{1}{1}h + \frac{1}{2}\frac{h^2}{\left( 1 + \varepsilon \right)^2}$\\
+		\begin{tabular}{lr}
+			$\Rightarrow h = 0,1 \Rightarrow x = 1 - h - \frac{1}{2} \frac{h^2}{\left( 1+ \varepsilon \right)^2}$&für $0 \leq \varepsilon \leq 1$\\
+		\end{tabular}
+		$\Rightarrow x = 1 - 0,1 - \frac{1}{2} \frac{0,1}{\left( 1 + 0,1\right)^2} = 0,95$
 	\section*{Aufgabe 6}
 		\begin{enumerate}[a)]
 			\item

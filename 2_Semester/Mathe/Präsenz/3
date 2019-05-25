@@ -1,0 +1,28 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{xfrac}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{marvosym}
+\pagestyle{fancy}
+
+\begin{document}
+	Punktweise und Gleichmäßige Konvergenz\\
+		Es sei $f(n):D\rightarrow\mathbb{R}$ eine Folge von Funktionen, dann heißt $(f_n)n_{n\in \mathbb{N}}$ punktweise Konvergent falls die Folge $(f_n(x))_n$ für alle $x\in D$ konvergiert. Die Funktionen-Folge $(f_n)_{n\in  \mathbb{N}}$ heißt gleichmäßig Konvergent gegen $f$ falls\\
+		 $\forall x \forall \epsilon>0 \exists N_0\in \mathbb{N} \forall n \geq N_0 \forall x \in D |f_n(x)-f(x)|<\epsilon$ oder äquivalent\\
+		 $\forall \epsilon >0 \exists N_0\in \mathbb{N}\forall n\geq N_0 \sup(|f_n(x)-f(x)|)<\epsilon$\\
+		 Satz: Ist $(f_n)_n$ eine gleichmäßig Konvergente Folge stetiger Funktionen, dann ist ihr Grenzwert auch stetig.\\
+		 Bsp: Sei $f_n:[0,1]\rightarrow \mathbb{R}\qquad f_n(x)=x^n$ hat Punktmäßig Grenzwerte.\\
+		 \begin{equation} 
+   f(x) = 
+   \begin{cases} 
+     0 für alle x\in [0,1)\\
+     1 für x=1
+   \end{cases} 
+\end{equation} 
+\end{document}
