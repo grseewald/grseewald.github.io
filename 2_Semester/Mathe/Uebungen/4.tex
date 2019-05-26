@@ -61,7 +61,14 @@
 				\abs{ \ln \frac{1 + e^x }{1+ e^y} } = \abs{ \left( \ln \left( 1 + e^x\right) \right) - \left( \ln \left( 1 + e^y \right) \right)} = \abs{ \left( \ln \left( 1 + e^y \right) \right) - \left( \ln \left( 1 + e^x\right) \right)}
 			\end{equation*}
 	\section*{Aufgabe 4}
-		
+		$f$ ist zwei mal differenzierbar.\\
+		$\rightarrow$ Satz von Taylor: $f$ ist $n+1$ mal differenzierbar mit $n+1$. Sei der Entwicklungspunkt $a=0$.\\
+		$f(x)=f(a)+f'(a)(x-a)$\\ 
+		$f(x)=f(0)+f'(0)(x)$ \qquad Mit der Vorraussetzung $f(0)=f'(0)=0$\\
+		$f(x)=0$.\\
+		Damit kann $f(x)$ durch das "Polynom" 0 dargestellt werden mit dem Restglied nach Lagrange:\\
+		$R_1(x;0)=\frac{\left( x - 0 \right)^2}{ 2 ! } \cdot f''\left( \xi \right) = \frac{f''\left( \xi \right)}{2} \cdot x^2$\\
+		wähle $c \geq \frac{f''\left( \xi\right)}{2}$, so ist $\abs{ f\left( x\right)}\leq c \cdot x^2$  
 	\section*{Aufgabe 5}
 		$\ln \left( 1 + h \right) = \ln 1 + \frac{1}{1}h + \frac{1}{2}\frac{h^2}{\left( 1 + \varepsilon \right)^2}$\\
 		\begin{tabular}{lr}
