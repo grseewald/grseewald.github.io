@@ -1,0 +1,79 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{xfrac}
+\usepackage{marvosym}
+\usepackage{wasysym}
+
+\usepackage{enumerate}
+
+
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+\begin{document}
+  \section*{Zum Beweisen}
+    Seien $A$ und $B$ zwei Aussagen gegeben. Wir wollwn $A \Rightarrow B$ zeigen. Dazu gibt es drei Beweis Arten.\\
+    \subsection*{Direkter Beweis}
+      $A \Rightarrow ... \Rightarrow ... \Rightarrow B$
+    \subsection*{Kontraposition}
+      $\neg B \Rightarrow ... \Rightarrow ... \Rightarrow \neg A$
+    \subsection*{Widerspruchs Beweis}
+      $A \wedge \neg B \Rightarrow ... \Rightarrow ... \Rightarrow \text{\Lightning}$
+    \subsection{Bsp}
+      Satz aus der Vorlesung:\\
+        Sind $f,g$ differenzierbare Funktionen, dann sind auch $f+g,f-g,f \cdot g, f \circ g$ differenzierbar, sowie $\frac{f}{g}$ falls $g(x)>0 \forall x$\\
+      Aufgabe:\\
+        Sei $f,g:(0,\infty)\to(0,\infty)$.\\
+        Zeige $f$ und $g$ differenzierbar ist äquivalent zu $f+g^2$ und $f-g^2$ differenzierbar.\\
+      Beweis: Wir zeigen zwei Richtungen:\\
+        \glqq$\Rightarrow$\grqq Sind $f$ und $g$ differenzierbar, so ist nach dem Satz aus der Vorlesung auch $g^2$ sowie sowie $f+g^2$ und $f-g^2$ differenzierbar \glqq$\Leftarrow$\grqq Sind nun $f+g^2$ und $f-g^2$ differenzierbar, so sind auch $\frac{1}{2}\left(f+g^2 \right)+\frac{1}{2}\left(f-g^2\right)=f$ und $\frac{1}{2}\left( f+g^2 \right)- \frac{1}{2}\left( f-g^2 \right)=g^2$ differenzierbar.\\
+        Da nach der Vorlesung die Wurzelfunktion differenzierbar und $g\left( x \right)>0$ ist auch $\sqrt{g\left( x\right)} = g\left( x \right)$ differenzierbar.
+  \section*{Stetig differenzierbare Funktion}
+    $C^n\left( \left( a,b \right) \right)=\left\lbrace f:\left(a,b\right) \to \mathbb{R} | \text{$f$ ist $n$ mal differenzierbar und $f^{\left( i\right)}$ ist stetig in $\left( a,b \right)$}\right\rbrace$\\
+    $C^n\left( \left[ a,b \right]\right)=\left\lbrace f:\left(a,b\right) \to \mathbb{R} | \text{$f$ ist $n$ mal stetig differenzierbar in $\left( a,b \right)$ und $f^{ \left( i\right) }$, $i=0,...,n$ ist stetig in $\left[ a,b \right] $ fortsetzbar}\right\rbrace$
+    \newpage
+  \section'{Aufgabe mit dem Taylor}
+    \begin{enumerate}[a)]
+      \item Zeige:\\
+        $u'(x)=\frac{u(x+h)-u(x)}{h}+o(h)$\\
+        d.h.: Es gib $r:\mathbb{R}\to\mathbb{R}$ mit\\
+        $u'(x)=\frac{u(x+h)-u(x)}{h}+r(h)$\\
+        wobei $\frac{r(h)}{h}\to 0$ für $h\to 0$
+      \item Zeige $u'(x)=\frac{u(x+h)-u(x-h)}{2h}+o(h^2)$
+      \item Zeige $-u''(x)=\frac{2u(x)-u(x+h)-u(x-h)}{h^2}+o(h^2)$
+    \end{enumerate}
+    \subsection{Lösung}
+      \begin{enumerate}[a)]
+        \item Mit dem Satz von Taylor folgt:\\
+          $u(x+h)=u(x)+u'(x)h+o(h) \Leftrightarrow u'(x)=\frac{u(x+h)-u(x)}{h}+o(h)$
+        \item
+        \item Mit dem Satz von Taylor folgt:\\
+        $u(x+h)=u(x)+u'(x)h+\frac{1}{2}u''(x)h^2$\\
+        $u(x-h)=u(x)-u'(x)h+\frac{1}{2}u''(x)(-h)^2+o(h^2)=u(x)-u'(x)h+\frac{1}{2}u''(x)h^2+o(h^2)$\\
+        Subtrahieren liefert:\\
+        $u(x+h)-u(x-h)=0+2u'(x)h+0+o(h^2)\Leftrightarrow b$\\
+        Addieren liefert c)\\
+        $\frac{2r(h)}{h^2} \to 0$\\
+        $o(h^2)\pm o(h^2)=o(h^2)$
+      \end{enumerate}
+\end{document}
