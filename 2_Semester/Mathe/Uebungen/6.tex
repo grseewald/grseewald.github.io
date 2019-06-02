@@ -78,6 +78,21 @@
         \end{center}
     \end{enumerate}
 
+  \section*{Aufgabe 2}
+
+    Sowohl $\sin(x)$ als auch $e^{(-x)}$ sind stetig, somit ist auch $\sin(x)-e^{(-x)}$ stetig.\\
+
+    \begin{align*}
+      f(0) &= \sin(0) - e^{0} = 0 - 1 = -1 \\
+      f\left(\frac{\pi}{2}\right) &= \sin\left(\frac{\pi}{2}\right) - e^{\left(-\frac{\pi}{2}\right)} 1 > 1 - e^0 = 0 \Rightarrow f\left(\frac{\pi}{2}\right) > 0
+    \end{align*}
+
+    Somit hat die Funktion nach dem Mittelwertsatz mindestens eine Nullstelle in $\left[ 0 , \frac{\pi}{2} \right] \to $ Zeigen, dass genau eine Ableitung positiv ist:\\
+
+    $f'(x) = \cos(x) - e^{(-x)} \cdot (- 1) = \cos(x) + e^{-x}$\\
+
+    Da $e^{-x}$ immer positiv ist und der Cosinus im Intervall $\left[ 0 , \frac{\pi}{2} \right]$ zwischen $\left[ 1,0 \right]$ schwankt. ist die Ableitung im Intervall $\left[ 0 , \frac{\pi}{2} \right]$ nur positiv. Somit ist $f(x)$ im Intervall streng monoton steigend und kann nur eine Nullstelle im Intervall haben.
+
   \section*{Aufgabe 3}
 
   \begin{enumerate}[a)]
@@ -107,8 +122,6 @@
         f''(0)&=-1&+0&-\frac{1}{2}&+\frac{1}{2}&=-1\\
       \end{tabular}\\
       $\to$ kein Terassenpunkt bei $x=0$, da zweite Ableitung $\neq 0 \to$ Extrempunkt bei $x=0$
-
-      \newpage
 
   \section*{Aufgabe 5}
 
