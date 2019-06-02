@@ -1,0 +1,97 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{xfrac}
+
+\usepackage{enumerate}
+
+\usepackage{fancyhdr}
+
+\usepackage{array}   % for \newcolumntype macro
+\newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
+
+
+\pagestyle{fancy}
+
+\fancyhf[HR]{Lukas Vormwald, Noah Mehling, Gregor Seewald}
+\fancyhf[HL]{Übung:Dienstag 12:00}
+
+\title{Mathematik für Informatiker 2\\Übungsblatt 5}
+\author{Lukas Vormwald \and Noah Mehling \and Gregor Seewald}
+\date{Übung 5:Dienstag 12:00}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+\begin{document}
+  \maketitle
+  \section*{Aufgabe 1}
+    \begin{enumerate}[a)]
+      \item
+        \begin{align*}
+            f(x) =& 8x^7 + 2x + 10 \\
+            8x^7 + 2x + 10 \stackrel{!}{=}& 10 \\
+            8x^7 + 2x =& -10 \\
+            x =& -1
+        \end{align*}
+        \begin{center}
+          \begin{tabular}{cc}
+            $\swarrow$&$\searrow$\\
+            $f'(-2)=-1,018$&$f'(0)=10$\\
+            negativ&positv\\
+            $\searrow$&$\swarrow$\\
+          \end{tabular}\\
+          Kein Terrassenpunkt $\to$ 1 Extremstelle bei $x=-1$
+        \end{center}
+      \item
+        \begin{align*}
+          f'(x) =& e^{-x^2} \cdot (-2)x \\
+          \underbrace{e^{-x^2}}_{\text{\tiny hat keine Nullstellen}} \cdot (-2) x \stackrel{!}{=} 0 \Leftrightarrow& -2x \stackrel{!}{=} 0\\
+          x=&0
+        \end{align*}
+        \begin{center}
+          \begin{tabular}{cc}
+            $\swarrow$&$\searrow$\\
+            $f'(-1)=0,74$&$f'(1)=0,74$\\
+            positiv&negativ\\
+            $\searrow$&$\swarrow$\\
+          \end{tabular}\\
+          Kein Terrassenpunkt $\to$ 1 Extremstelle bei $x=0$
+        \end{center}
+    \end{enumerate}
+
+  \section*{Aufgabe 2}
+
+  \section*{Aufgabe 3}
+
+  \section*{Aufgabe 4}
+
+
+      \begin{tabular}{*{6}L}
+        f'(x)&=\frac{1}{1+x}&+2\cos(x)&-3&-\frac{x}{2}&+x\cdot\frac{1}{2}\\
+        f'(0)&=1&+2&-3&-0&+0\\
+        =3&-3&=0&&&\to Extrapunkt?\\
+        f''(x)&=\frac{-1}{\left( 1+x\right)^2}&+2\cdot\left( \sin(x) \right)&-\frac{1}{2}&+\frac{1}{2}\\
+        f''(0)&=-1&+0&-\frac{1}{2}&+\frac{1}{2}&=-1\\
+      \end{tabular}
+      $\to$ kein Terassenpunkt bei $x=0$, da zweite Ableitung $\neq 0 \to$ Extrempunkt bei $x=0$
+
+\end{document}

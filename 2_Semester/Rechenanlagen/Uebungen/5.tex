@@ -20,6 +20,10 @@
 \title{Rechenanlagen\\Übungsblatt 5}
 \author{Lukas Vormwald \and Noah Mehling \and Gregor Seewald}
 \date{Übung :Dienstag 14:00}
+
+\newcommand{\nor}[0]{\ensuremath{\text{ nor }}}
+\newcommand{\spa}[0]{\nor}
+
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 
@@ -38,6 +42,7 @@
 \makeatother
 
 \begin{document}
+\maketitle
   \section*{Aufgabe 5.1}
     \begin{verbatim}
       ENTITY xnor IS
@@ -57,10 +62,10 @@
       END behavior
     \end{verbatim}
   \section*{Aufgabe 5.2}
-    $\bar a \vee by$\\\\
-    $\overline{(\overline{(\bar a \vee by)})}$\\\\
-    $\overline{((a \bar b \vee \bar y))}$\\\\
-    $\overline{(\bar a nor \bar b nor y)}$\\
-    $\bar a nor \bar b nor y nor \bar a \bar b nor y$\\\\
-    $(a nor a) nor ((b nor y) nor (b nor y)) nor ((a nor a) nor ((b nor y) nor (b nor y))$
+    $\bar a \vee by$\\
+    $\overline{(\overline{(\bar a \vee by)})}$\\
+    $\overline{((a \bar b \vee \bar y))}$\\
+    $\overline{(\bar a \nor \bar b \nor y)}$\\
+    $\bar a \nor \bar b \nor y \nor \bar a \nor \bar b \nor y$\\
+    $(a \nor a) \nor ((b \nor y) \nor (b \nor y)) \nor ((a \nor a) \nor ((b \nor y) \nor (b \nor y))$
 \end{document}

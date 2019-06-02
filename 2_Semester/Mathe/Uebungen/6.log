@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.4.23)  1 JUN 2019 16:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.4.23)  1 JUN 2019 17:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**5.tex
-(./5.tex
+**6.tex
+(./6.tex
 LaTeX2e <2018-04-01> patch level 5
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -507,8 +507,17 @@ Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footers
 \f@nch@O@erf=\skip63
 \f@nch@O@olf=\skip64
 \f@nch@O@orf=\skip65
-) (./5.aux)
-\openout1 = `5.aux'.
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
+\col@sep=\dimen162
+\ar@mcellbox=\box45
+\extrarowheight=\dimen163
+\NC@list=\toks23
+\extratabsurround=\skip66
+\backup@length=\skip67
+\ar@cellbox=\box46
+) (./6.aux)
+\openout1 = `6.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
 LaTeX Font Info:    ... okay on input line 44.
@@ -531,16 +540,16 @@ LaTeX Font Info:    ... okay on input line 44.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count197
-\scratchdimen=\dimen162
-\scratchbox=\box45
+\scratchdimen=\dimen164
+\scratchbox=\box47
 \nofMPsegments=\count198
 \nofMParguments=\count199
-\everyMPshowfont=\toks23
+\everyMPshowfont=\toks24
 \MPscratchCnt=\count266
-\MPscratchDim=\dimen163
+\MPscratchDim=\dimen165
 \MPnumerator=\count267
 \makeMPintoPDFobject=\count268
-\everyMPtoPDFconversion=\toks24
+\everyMPtoPDFconversion=\toks25
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
  (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
@@ -585,26 +594,33 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 45.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (32.00542pt too wide) in paragraph at lines 65--71
-\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 a[]a\OT1/cmr/m/n/10.95 )[]((\OML/cmm/m/it/10.95 b[]y\OT1/cmr/m/n/10.95 )[](\OML/cmm/m/it/10.95 b[]y\OT1/cmr/m/n/10.95 ))[]((\OML/cmm/m/it/10.95 a[]a\OT1/cmr/m/n/10.95 )[]((\OML/cmm/m/it/10.95 b[]y\OT1/cmr/m/n/10.95 )[](\OML/cmm/m/it/10.95 b[]y\OT1/cmr/m/n/10.95 ))$ 
+Overfull \hbox (13.09534pt too wide) in paragraph at lines 88--96
+[] $\OMS/cmsy/m/n/10.95 !$ \OT1/cmr/m/n/10.95 kein Teras-
  []
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./5.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.68405pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2] (./6.aux) ) 
 Here is how much of TeX's memory you used:
- 13544 strings out of 492641
- 247518 string characters out of 6131787
- 299342 words of memory out of 5000000
- 17327 multiletter control sequences out of 15000+600000
- 539603 words of font info for 52 fonts, out of 8000000 for 9000
+ 13592 strings out of 492641
+ 248089 string characters out of 6131787
+ 303251 words of memory out of 5000000
+ 17374 multiletter control sequences out of 15000+600000
+ 539435 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,6n,63p,268b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on 5.pdf (1 page, 74569 bytes).
+ 41i,15n,63p,268b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on 6.pdf (2 pages, 112309 bytes).
 PDF statistics:
- 36 PDF objects out of 1000 (max. 8388607)
- 25 compressed objects within 1 object stream
+ 55 PDF objects out of 1000 (max. 8388607)
+ 39 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
