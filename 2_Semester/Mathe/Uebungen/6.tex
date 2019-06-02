@@ -78,9 +78,23 @@
         \end{center}
     \end{enumerate}
 
-  \section*{Aufgabe 2}
-
   \section*{Aufgabe 3}
+
+  \begin{enumerate}[a)]
+    \item Zu betrachten sind 3 Fälle:\\
+          $f(x)=0$, Damit sind alle Funktionswerte $f(\phi) = f(x_1) = f(x_2)$. Somit sind diese Punkte relative Extrema der Funktion, jedoch kein striktes Extrema.\\
+          Ist $f(x_1 + \phi)$ für ein kleines $\phi$ negativ, so gilt aufgrund ger Stetigkeit: $\lim\limits_{x \to \phi} f(x_1)=f(\phi)$. Da dieser Funktionswert nun negativ ist und diese Bedingung ebenfalls für $f(x_2 - \phi)$ gelten muss, so muss die Funktion ein lokales Extrema aufweisen, da diese sonst die Definition der Stetigkeit verletzen würde.\\
+          Für $f(x_1+\phi)$ positiv verlaüft der Beweis analog zu $f(x_1+\phi)$ negativ.
+
+    \item Es gibt Drei Fälle zu betrachten:
+          \begin{enumerate}[1.]
+            \item $f$ ist eine konstante Funktion. Dann ist $f'(x)=0$ und besitzt somit unendlich viele Nullstellen in $\mathbb{R}$. Somit besitzt auch $f$ höchstens unendlich viele Nullstellen ($\infty + 1$).
+
+            \item $f$ ist ein Polynom. Dann gilt nach dem Fundamentalsatz der Algebra, dass der Grad des Polynoms die maximale Anzahl an Nullstellen angibt. Da die Ableitung von Polynomen der Form $f(x)=x^n\Rightarrow f'(x)=n\cdot x^{n-1}$ ist und somit auch der Grad der Ableitung der Funktion um 1 vermindert wird gilt die Aussage ebenfalls.
+
+            \item $f$ ist eine trigonometrische Funktion: Da trigonometrische Funktionen ebenfalls unendlich viele Nullstellen aufweisen, gilt hier das selbe Argument wie bei 1.
+          \end{enumerate}
+  \end{enumerate}
 
   \section*{Aufgabe 4}
 
@@ -91,7 +105,19 @@
         =3&-3&=0&&&\to Extrapunkt?\\
         f''(x)&=\frac{-1}{\left( 1+x\right)^2}&+2\cdot\left( \sin(x) \right)&-\frac{1}{2}&+\frac{1}{2}\\
         f''(0)&=-1&+0&-\frac{1}{2}&+\frac{1}{2}&=-1\\
-      \end{tabular}
+      \end{tabular}\\
       $\to$ kein Terassenpunkt bei $x=0$, da zweite Ableitung $\neq 0 \to$ Extrempunkt bei $x=0$
+
+      \newpage
+
+  \section*{Aufgabe 5}
+
+    Die Funktion muss mindestens ein globales Minimum aufweisen. Da die Funktion stetig ist gilt:\\
+    $\lim\limits_{x \to \phi} f(x)=f(\phi)$. Wählt man als $\phi$ nun $\infty$, so muss auch der Funktionswert gegen $\infty$ konvergieren. Aufgrund der Bedingung der Angabe jedoch gegen $-\infty$ ebenfalls.\\
+    Nun existieren zwei Möglichkeiten:
+    \begin{enumerate}
+      \item Die gegebene Bedingung ist erfüllt, dann ist das gewählte $f(x)$ bereits das gesuchte Minimum.
+      \item eine der beiden Bedingungen ist verletzt. Dann ist es möglich, eine Umgebung $f(x+\phi)$ bei Verletzung des $\lim\limits_{x \to +\infty}$, bzw. $f(x-\phi)$ bei Verletzung von $\lim\limits_{x \to -\infty}$ zu wählenm bis die Teilfolge nicht mehr gegen $f(x)$ konvergiert (man betrachtet also $\lim\limits_{x+\phi \to x} f(x)$). Dieser Wert entspricht dann Fall 1.
+    \end{enumerate}
 
 \end{document}
