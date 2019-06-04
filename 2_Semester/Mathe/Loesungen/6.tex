@@ -1,0 +1,85 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{xfrac}
+
+\usepackage{enumerate}
+
+\usepackage{fancyhdr}
+
+\usepackage{array}   % for \newcolumntype macro
+\newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
+
+
+\pagestyle{fancy}
+
+\fancyhf[HR]{Lukas Vormwald, Noah Mehling, Gregor Seewald}
+\fancyhf[HL]{Übung:Dienstag 12:00}
+
+\title{Mathematik für Informatiker 2\\Übungsblatt 7}
+\author{Lukas Vormwald \and Noah Mehling \and Gregor Seewald}
+\date{Übung 5:Dienstag 12:00}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+\begin{document}
+  \section*{Aufgabe 1}
+    \begin{enumerate}[a)]
+      \item $f(x)=x^8+x^2+10x-15$\\
+      Offenbar ist $f$ beliebig oft differenzierbar mit $f'(x)=8x^7+2x+10,f''(x)=56x^6+2$.\\
+      Wegen $f''(x)>0 \forall x\in \mathbb{R}$ ist $f'$ streng monoton wachsend und hat daher höchstens eine Nullstelle.\\
+      Wegen $f'(-1)=0$ ist also $x=-1$ die einzige Nullstelle von $f'$, und wegen $f''(-1)>0$ ist $x=-1$ das einzige lokale Extremum (Satz 12.7), nämlich lokales Minimum (Satz 12.8).
+      \item $g(x)=e^{-x^2}$\\
+      Offenbar ist $g$ beliebig oft differenzierbar mit $g'(x)=-2x e^{-x^2}$. Offenbar ist $x=0$ die einzige Nullstelle von $g'$.Wegen $g'(x)>0$ für $x<0$ und $g'(x)<0$ für $x>0$ ist $g$ auf $(-\infty,0)$ streng monoton wachsend und auf $(0,\infty)$ streng monoton fallend. Also ist bei $x=0$ das einzige lokale Extremum, nämlich ein lokales Maximum.
+    \end{enumerate}
+  \section*{Aufgabe 2}
+    $f(x)=\sin(x)-e^{-x}$\\
+    $f$ ist beliebig oft differenzierbar mit $f'(x)=\cos(x)+e^{-x}>0 \forall x\in \left[0,\frac{\pi}{2}\right]$. Also ist f streng monoton wachsend in $\left[0,\frac{\pi}{2}\right]$ und hat daher dort höchstens eine Nullstelle. Ferner ist f stetig mit $f(0)=\sin 0 - e^{-0}=-1<0$ und $f\left( \frac{\pi}{2} \right) = \sin \frac{\pi}{2} - e^{-\frac{\pi}{2}}>0 $. Also hat $f$ nach dem ZWS mindestens eine Nullstelle in $\left[ 0, \frac{\pi}{2}\right]$; insgesamt also genau eine.
+  \section*{Aufgabe 3}
+    \begin{enumerate}[a)]
+      \item  Nach dem Satz von Weierstraß (Satz 11.11) gibt es $\xi_1,\xi_2 \in \left[x_1,x_2\right]$ mit $f\left( \xi_ \right) \leq f(x) \leqf\left( \xi_ \right) \forall x \in \left[ x_1,x_2 \right]$. Gilt $\xi_1,\xi_2 \in \left\lbrace x_1,x_2 \right\rbrace$, so gilt $0=f\left(\xi_1\right) \leq f(x) \leq f\left(\xi_2\right) = 0$, also $f(x)=0 \forall x \in \left[x_1,x_2\right]$.\\
+      In diesem Fall ist $f$ konstant , und jedes $x\in\left( x_1,x_2 \right)$ ist lokales Maximum und Minimum.\\
+      Andernfalls gilt $\xi_1\in \left(x_1,x_2\right)$ oder $\xi_2 \in \left(x_1,x_2\right)$, d.h. $\xi_1$ ist lokales Minimum oder $\xi_2$ ist lokales Maximum im Inneren von $\left[x_1,x_2\right]$.
+      \item Angenommen, f hat mindestens $n+2$ Nullstellen $x_1<...<x_{n+2}$. Nach dem Satz von Rolle (Satz 12.8) existiert zu jedem $k\in\left\lbrace 1,...,n+1\right\rbrace$ ein $\xi_k \in \left\lbrace x_k, x_{k+1}\right\rbrace$ mit $f'\left( \xi_k\right)=0$ Also hat $f'$ mindestens $n+1$ Nullstellen, ein Widerspruch.
+      \item Die Funktion $f:=2^x-x^2=e^{x\ln 2} -x^2$ ist beliebig oft differenzierbar mit
+        \begin{align*}
+          f'(x)=& \ln 2 e^{x\ln 2} -2x\\
+          f''(x)=& (\ln 2)^2 e^{x\ln 2} -2\\
+          f'''(x)=& (\ln 2)^3 e^{x\ln 2} >0 \forall x\in \mathbb{R}\\
+        \end{align*}
+        Nach (b) hat $f''$ höchstens eine $f'$ höchstens zwei und $f$ höchstens drei Nullstellen. Also hat $2^x=x^2$ höchstens 3 Lösungen.\\
+        Ferner gilt $f(2)=2^2-2^2=0$ und $f(4)=2^4-4^2=0$, sowie $f(0)=2^0-0^2=1>0$ und $f(-1)=\frac{1}{2}-1=-\frac{1}{2}<0$.\\
+        Also sind $x=2$ und $x=4$ zwei Lösungen, und nach dem ZWS liegt zwischen $-1$ und $0$ die dritte.
+      \section*{Aufgabe 4}
+        $f(x)=\ln(1+x)+2 \sin(x) - x(3-\frac{x}{2})$, $x>-1$. Offenbar ist f beliebig oft differenzierbar mit
+        \begin{align*}
+          f(0)=&0\\
+          f'(x)=&\frac{1}{1+x}+2\cos(x)-3+x &\Rightarrow f'(0)=0\\
+          f''(x)=&\frac{1}{(1+x)^2}-2\sin(x)+1 &\Rightarrow f''(0)=0,\\
+          f'''(x)=&\frac{2}{(1+x)^3}-2\cos(x) &\Rightarrow f'''(0)=0,\\
+          f''''(x)=&\frac{6}{(1+x)^4} + 2\sin(x) &\Rightarrow f''''(0)=-6<0.
+        \end{align*}
+      Da $f''''$ stetig ist gibt es ein $\delta>0$ mit $f''''(x)=0 \forall x \in \left[ -\delta,\delta \right]$. Für jedes solche $x$ gibt es nach dem Satz von Taylor ein $\xi \in \left[-\delta,\delta\right]$ mit\\
+      $f(x)=\sum\limits_{k=0}^3 \frac{f^{k}(0)}{k!}x^k + \frac{f''''(\xi)}{4!}x^4 = \frac{f''''(\xi)}{24}x^4\leq 0$, d.h. f hat bei $x=0$ ein lokales Maximum.
+
+    \end{enumerate}
+\end{document}

@@ -1,0 +1,15 @@
+      entity xnor is
+        PORT (x,y : IN bit; z : OUT bit)
+      END xnor
+      ARCHITECTURE behavior OF xnor IS
+        CONSTANT tdhl : TIME := 25ps;
+        CONSTANT tdlh : TIME := 45ps;
+      BEGIN
+        PROCESS(x,y)
+        BEGIN
+          IF x=y
+            THEN z <= '1' AFTER tdlh;
+            ELSE z <= '0' AFTER tdhl;
+          END IF
+        END PROCESS
+      END behavior

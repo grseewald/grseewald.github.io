@@ -8,11 +8,15 @@
 \usepackage{mathtools}
 \usepackage{xfrac}
 
+\usepackage{xcolor}
+
 \usepackage{enumerate}
 
 \usepackage{fancyhdr}
 
 \usepackage{graphicx}
+
+\usepackage{listings}
 
 \pagestyle{fancy}
 
@@ -24,7 +28,6 @@
 \date{Übung :Dienstag 14:00}
 
 \newcommand{\nor}[0]{\ensuremath{\text{ nor }}}
-\newcommand{\spa}[0]{\nor}
 
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
@@ -46,7 +49,8 @@
 \begin{document}
 \maketitle
   \section*{Aufgabe 5.1}
-    \begin{verbatim}
+  \lstset{language=vhdl,keywordstyle=\color{blue}, numbers=left}
+    \begin{lstlisting}
       ENTITY xnor IS
         PORT (x,y : IN bit; z : OUT bit)
       END xnor
@@ -62,7 +66,7 @@
           END IF
         END PROCESS
       END behavior
-    \end{verbatim}
+    \end{lstlisting}
 
   \section*{Aufgabe 5.2}
     $\bar a \vee by$\\
