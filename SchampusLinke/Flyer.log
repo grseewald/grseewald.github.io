@@ -1,0 +1,226 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.4.23)  5 JUN 2019 19:13
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**Flyer.tex
+(./Flyer.tex
+LaTeX2e <2018-04-01> patch level 5
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2018/04/16 v5.8 Page Geometry
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+) (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count88
+\Gm@cntv=\count89
+\c@Gm@tempcnt=\count90
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+) (/usr/share/texlive/texmf-dist/tex/latex/blindtext/blindtext.sty
+Package: blindtext 2012/01/06 V2.0 blindtext-Package
+ (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+\c@blindtext=\count91
+\c@Blindtext=\count92
+\c@blind@countparstart=\count93
+\blind@countxx=\count94
+\blindtext@numBlindtext=\count95
+\blind@countyy=\count96
+\c@blindlist=\count97
+\c@blindlistlevel=\count98
+\c@blindlist@level=\count99
+\blind@listitem=\count100
+\c@blind@listcount=\count101
+\c@blind@levelcount=\count102
+\blind@mathformula=\count103
+\blind@Mathformula=\count104
+\c@blind@randomcount=\count105
+\c@blind@randommax=\count106
+\c@blind@pangramcount=\count107
+\c@blind@pangrammax=\count108
+) (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2018/08/03 v2.3 Span multiple rows of a table
+\multirow@colwidth=\skip43
+\multirow@cntb=\count109
+\multirow@dima=\skip44
+\bigstrutjot=\dimen111
+) (./Flyer.aux)
+\openout1 = `Flyer.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(21.33978pt, 99.5842pt, 21.3398pt)
+* v-part:(T,H,B)=(17.07181pt, 99.5842pt, 25.60777pt)
+* \paperwidth=142.26378pt
+* \paperheight=142.26378pt
+* \textwidth=99.5842pt
+* \textheight=99.5842pt
+* \oddsidemargin=-50.9302pt
+* \evensidemargin=-50.9302pt
+* \topmargin=-92.19818pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 13.
+
+./Flyer.tex:19: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 ...UNG\\MIT EINEM GASTVORTRAG VON\\SEA-WATCH}
+                                                  &\multirow{3}{*}{Wittelsba...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./Flyer.tex:19: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 ...UNG\\MIT EINEM GASTVORTRAG VON\\SEA-WATCH}
+                                                  &\multirow{3}{*}{Wittelsba...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./Flyer.tex:19: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 ...UNG\\MIT EINEM GASTVORTRAG VON\\SEA-WATCH}
+                                                  &\multirow{3}{*}{Wittelsba...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./Flyer.tex:19: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 ...{3}{*}{Wittelsbacher\\Platz\\\\Hörsaal 2}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./Flyer.tex:19: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 ...{3}{*}{Wittelsbacher\\Platz\\\\Hörsaal 2}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./Flyer.tex:19: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 ...{3}{*}{Wittelsbacher\\Platz\\\\Hörsaal 2}
+                                                  \\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (373.03354pt too wide) in paragraph at lines 13--21
+[][] 
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Flyer.aux) ) 
+Here is how much of TeX's memory you used:
+ 965 strings out of 492641
+ 13745 string characters out of 6131787
+ 80265 words of memory out of 5000000
+ 4907 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 23i,9n,19p,181b,127s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb>
+Output written on Flyer.pdf (1 page, 16310 bytes).
+PDF statistics:
+ 12 PDF objects out of 1000 (max. 8388607)
+ 7 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

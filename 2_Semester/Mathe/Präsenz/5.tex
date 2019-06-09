@@ -1,0 +1,87 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{xfrac}
+\usepackage{marvosym}
+\usepackage{wasysym}
+
+\usepackage{enumerate}
+
+
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+\begin{document}
+  \section*{Aufgabe 1}
+
+    Es sei $f:\mathbb{R}^n\to\mathbb{R}$ eine Funnktion.\\
+    Dann heißt $x^*$ ein lokales Minimum von $f$ falls es ein $r>0$; so dass $f(x*)\leq f(x)$ für alle $x \in \mathbb{R}$ mit $\abs{\abs{x-x^*}}<r$.\\
+    Analog (striktes) lokales Maximum, und globales Minimum\\
+    Wir fragen uns, was eine \underline{notwendige} Optimalitätsbedingung für $x^*$ lokales Minimum/Maximum ist.\\
+    Im eindimensionalen Fall ist dies $\underbrace{f'(x^*)}_{\frac{d}{dx}f(x^*)}=0$\\
+    $\left(\begin{array}{c} 0 \\ ... \\ 0 \end{array}\right)=\nabla f(x^*):=\left(
+    \begin{array}{c}
+    \frac{d}{dx_1}f(x_1^*,...,x_n^*)\\
+    \frac{d}{dx_2}f(x_1^*,...,x_n^*)\\
+    ...\\
+    \frac{d}{dx_n}f(x_1^*,...,x_n^*)
+    \end{array}\right)$\\
+    z.B.\\
+    $f(x_1,x_2)=x_1^3\cdot x_2^2$\\
+    $\nabla f(x_1,x_2)=\left(
+    \begin{array}{c}
+      3x_1^2\cdot x_2^2\\
+      2x_1^3\cdot x_2
+    \end{array}\right)$\\
+    Nun bedeutet\\
+    $0=\nabla f(x)$ dass $0=3x_1^2 \cdot x_2^2$ und $0=2x_1^3\cdot x_2$\\
+    $\Rightarrow$ Lösungsmenge ist $\left\lbrace \left(\begin{array}{c} x_1 \\ x_2 \end{array}\right) \in \mathbb{R}^2 \begin{array}{c} x_1=0\text{ oder} \\ x_2=0 \end{array} \right\rbrace$\\
+    Nun zur Hinreichenden Bedingung für \underline Minimum\\
+    In $1-\lim f'(x^*)=0$ und $f''(x^*)>0$\\
+    In $n-lim sit dies$.\\
+    $\nabla f(x^*)=0$und die Matrix\\
+    \[
+    \nabla^2f(x^*):=\left\lbrace
+    \begin{array}{rrr}
+      \frac{d}{dx_1}\frac{d}{dx_1}f(x^*)&...&\frac{d}{dx_1}\frac{d}{dx_n}f(x^*)\\
+      .&&.\\
+      .&&.\\
+      .&&.\\
+      \frac{d}{dx_n}\frac{d}{dx_1}f(x^*)&...&\frac{d}{dx_n}\frac{d}{dx_n}f(x^*)\\
+    \end{array}
+    \right\rbrace
+    \]\\
+    ist positiv Definiert d.h. für alle \\
+    $v\in \mathbb{R}^n\textbackslash\left\lbrace 0 \right\rbrace v^T\left( \nabla^2 f(x^*) v\right)>0 | $ $\nabla^2$ ist falls $f$ zweimal stetig differenzierbar symmetrisch.\\
+    \paragraph{Aufgabe:}
+    Bestimme die Minimierer $x^*$ von $f:\mathbb{R}^3\to\mathbb{R}$ mit $f\left(x_1,x_2,x_3\right)=x_1^2+\left(x_2-2\right)^2+\left(x_3-3\right)^2$\\
+    Danach:\\
+    Gehe auf Wolframalpha.com und plotte die Funktion.\\
+
+    \paragraph{Lösung}
+
+    \[
+      \left(\begin{array}{c} 0 \\ 0 \\ 0\end{array} \right)= \nabla f(x_1,x_2,x_3)= \left(\begin{array}{c} 2x_1 \\ 2\left(x_2-2\right) \\ 2\left( x_3 -3\right)\end{array}\right)\\
+      \Rightarrow \begin{array}{c} x_1^*=0 \\ x_2^*=2 \\ x_3^*=3\end{array}
+    \]
+
+\end{document}

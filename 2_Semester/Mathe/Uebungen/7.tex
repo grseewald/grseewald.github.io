@@ -7,6 +7,7 @@
 \usepackage{amssymb}
 \usepackage{mathtools}
 \usepackage{xfrac}
+\usepackage{marvosym}
 
 \usepackage{enumerate}
 
@@ -42,5 +43,67 @@
 \makeatother
 
 \begin{document}
-  
+
+  \section*{Aufgabe 1}
+
+    \begin{enumerate}[a)]
+      \item
+    \end{enumerate}
+
+  \section*{Aufgabe 2}
+
+    $\frac{1}{1-z-z^2-z^3}$\\
+    Nullstellen von Nennerpolynom:\\
+    $z=1$\\
+    $(z^3-z^2-z+1) : (z-1)=z^2-1$\\
+    $\Rightarrow z^2=1 \Rightarrow z_2=1,z_3=-1$\\
+    $\Rightarrow \frac{1}{\left(z-1\right)^2\cdot\left(z+1\right)}=\frac{A}{\left(z+1\right)}+\frac{B}{\left(z-1\right)}+\frac{C}{\left(z-1\right)^2}$\\
+    $\Rightarrow 1=\frac{A\cdot \left(z-1\right)^2-\left(z+1\right)}{\left(z+1\right)}+\frac{B\cdot \left(z-1\right)^2\cdot \left(z+1\right)}{\left(z-1\right)}+\frac{C\cdot \left(z-1\right)^2\cdot\left(z+1\right)}{\left(z-1\right)^2}$\\
+    $=A\cdot \left(z-1\right)^2+B\cdot\left(z-1\right)\left(z+1\right)+C\cdot\left(z+1\right)$\\
+    $\Rightarrow z=1 \Rightarrow 1=2C \Rightarrow C=0,5$\\
+    $z=-1 \Rightarrow 1=4A \Rightarrow A=0,25$\\
+    $\Rightarrow$ z beliebig, z.B $0$\\
+    \begin{align*}
+      \Rightarrow 1 =& 0,25 \cdot 1 + B \cdot \left( -1 \right) \cdot 1 + 0,5 \cdot 1\\
+      1 =& 0,25 - B + 0,5\\
+      B =& 0,75 - 1 + 0,5 &\Rightarrow B = -0,25
+    \end{align*}
+    $\Rightarrow \frac{1}{1-z-z^2+z^3} = \frac{0,25}{\left(z+1\right)} - \frac{0,25}{\left(z-1\right)}+ \frac{0,5}{\left(z-1\right)^2}$
+
+  \section*{Aufgabe 3}
+
+  \section*{Aufgabe 4}
+
+    $\frac{2x^2 + 7x + 5}{\left( x^2 + x + 2\right)\left( x^2 +1 \right)}$\\
+    Nullstellen:\\
+    $\left(x^2+1\right)\Rightarrow$ keine\\
+    $x^2+x+2 \Rightarrow x_{1,2} = \frac{-1\pm\sqrt{1^2-4\cdot1\cdot2}}{2-1}$\qquad\Lightning keine Nullstelle\\
+    $\Rightarrow \frac{Ax+B}{4x^2+x+2} + \frac{Cx+D}{x^2+1}$\\
+    $\Rightarrow \frac{2x^2+7x+5}{\left(x^2+x+2\right)\left(x^2+1\right)} = \frac{Ax+B}{x^2+x+2} + \frac{Cx+D}{x^2+1}$
+    \newpage
+    \begin{align*}
+      \frac{2x^2+7x+5}{\left(x^2+x+2\right)\left(x^2+1\right)} =& \frac{\left(Ax+B\right)\left(x^2+1\right)}{\left(x^2+x+2\right)\left(x^2+1\right)} + \frac{\left(Cx+D\right)\left(x^2+x+2\right)}{\left(x^2+x+2\right)\left(x^2+1\right)}\\
+      =& \frac{\left(Ax+B\right)\left(x^2+1\right) + \left(Cx + D\right)\left(x^2+x+2\right)}{\left(x^2+x+2\right)\left(x^2+1\right)}\\
+      =& \frac{Ax^3+Ax+Bx^2+B+Cx^3+Cx^2+2Cx+Dx^2+Dx+D}{\left(x^2+x+2\right)\left(x^2+1\right)}\\
+    \frac{2x^2+7x+5}{\left(x^2+x+2\right)\left(x^2+1\right)} =& \frac{x^3\left(A+C\right)+x^2\left(B+C+D\right)+x\left(A+2C+D\right)+\left(B+D\right)}{\left(x^2+x+2\right)\left(x^2+1\right)}
+    \end{align*}
+    \begin{align}
+      \Rightarrow A+C=&0 & \Rightarrow A=&C \label{eq:1}\\
+      B+C+D=&2 \label{eq:2}\\
+      A+2C+D=&7 \label{eq:3}\\
+      B+D=&5 \label{eq:4}
+    \end{align}
+    \begin{align}
+      \Rightarrow \eqref{eq:1} \text{ in } \eqref{eq:3} \Rightarrow A+2A+D=7 \Rightarrow 3A+D=7 \Rightarrow D=7-3A \label{eq:3*}\\
+      \Rightarrow \eqref{eq:1} \& \eqref{eq:3*} \text{ in } \eqref{eq:2} \Rightarrow B+A+7-3A=2 \Rightarrow B-2A=-5 \Rightarrow B=2A-5 \label{eq:2*}\\
+      \Rightarrow \eqref{eq:2*} \& \eqref{eq:3*} \text{ in } \eqref{eq:4} \Rightarrow 2A-5+7-3A=5 \Rightarrow 2A-3A=3 \Rightarrow -A=3 \Rightarrow A=-3
+    \end{align}
+    \begin{align*}
+      B&=2\cdot \left(-3\right)-5 &= 11\\
+      C&=A&=-3\\
+      D&=7-3\cdot\left(-3\right) &=7+9 &=16
+    \end{align*}
+    \begin{equation*}
+      \Rightarrow \frac{2x^2+7x+5}{\left(x^2+x+2\right)\left(x^2+1\right)}&\frac{-3x-11}{x^2+x+2}+\frac{-3x+16}{x^2+1}=\frac{3x+11}{x^2+x+2}-\frac{3x-16}{x^2+1}
+    \end{equation*}
 \end{document}
