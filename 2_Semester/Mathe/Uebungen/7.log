@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.4.23)  8 JUN 2019 16:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.4.23)  10 JUN 2019 19:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -597,12 +597,6 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 55.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 55--66
-
- []
-
-LaTeX Font Info:    Try loading font information for U+mvs on input line 80.
-(/usr/share/texlive/texmf-dist/tex/latex/marvosym/umvs.fd)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.68405pt.
@@ -612,24 +606,22 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-Overfull \hbox (42.4047pt too wide) detected at line 89
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.68405pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2]
+Overfull \hbox (7.03542pt too wide) detected at line 156
 []
  []
 
-
-Overfull \hbox (22.03267pt too wide) detected at line 100
+LaTeX Font Info:    Try loading font information for U+mvs on input line 164.
+(/usr/share/texlive/texmf-dist/tex/latex/marvosym/umvs.fd)
+Overfull \hbox (42.4047pt too wide) detected at line 172
 []
  []
-
-./7.tex:107: Misplaced alignment tab character &.
-l.107 ...{\left(x^2+x+2\right)\left(x^2+1\right)}&
-                                                  \frac{-3x-11}{x^2+x+2}+\fr...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -637,20 +629,31 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2] (./7.aux) ) 
+[3]
+Overfull \hbox (22.03267pt too wide) detected at line 183
+[]
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.68405pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[4] (./7.aux) ) 
 Here is how much of TeX's memory you used:
  13872 strings out of 492641
  250666 string characters out of 6131787
- 307088 words of memory out of 5000000
+ 311088 words of memory out of 5000000
  17649 multiletter control sequences out of 15000+600000
  538012 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,12n,63p,268b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,12n,63p,268b,327s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/marvosym/marvosym.pfb>
-Output written on 7.pdf (2 pages, 89435 bytes).
+Output written on 7.pdf (4 pages, 98989 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
- 36 compressed objects within 1 object stream
+ 57 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
