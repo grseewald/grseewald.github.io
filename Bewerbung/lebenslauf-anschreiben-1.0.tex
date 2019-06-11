@@ -9,7 +9,7 @@
 \documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % moderncv themes
-\moderncvstyle{oldstyle}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvstyle{banking}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 %\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
@@ -31,7 +31,7 @@
 \phone[mobile]{+49~(176)~41623908}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 \phone[fixed]{(0931)~408357}
 %\phone[fax]{+3~(456)~789~012}
-\email{grseewal@gmail.com}                               % optional, remove / comment the line if not wanted
+\email{grseewald@gmail.com}                               % optional, remove / comment the line if not wanted
 % \homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
 % \social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
 % \social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
@@ -57,20 +57,27 @@
 % #################################
 % Anschreiben.............
 
-\recipient{Max Mustermann AG}{Personalwesen \\ Hans-Beispiel-Straße 2 \\ 55555 Beispielhausen}
+\recipient{Institut für Mathematik}{Emil-Fischer-Straße 40\\
+97074 Würzburg\\
+Gebäude:  40 (Mathematik Ost)\\
+Raum:  00.009\\\vspace{1cm}}
 
 \date{\today}
-\opening{Sehr geehrter Damen und Herren,}
-\closing{Mit freundlichen Grüßen, \vspace{0,3cm} \\ %\includegraphics[width=4.5cm]{unterschrift.png} \vspace{-1,0cm}%
+\opening{Sehr geehrter Herr Dr. Greiner,}
+\closing{Mit freundlichen Grüßen, %\vspace{0,3cm} \\ %\includegraphics[width=4.5cm]{unterschrift.png} \vspace{-1,0cm}%
 }
 \enclosure[Anhänge]{Lebenslauf}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
 \makelettertitle
 
+%uns wurde nach der vergangenen Mathematik Präsenzübung eine Stelle als Sysadmin-Hiwi in ihrem Institut vorgestellt. Gerne bewerbe ich mich auf diese Stelle.\\
 
+hiermit möchte ich mich für die Stelle als Sysadmin-Hiwi in ihrem Institut bewerben, welcher uns nach der letzten Mathematik Präsenzübung vorgestellt wurde.
 
-Vorkenntnise habe ich in soweit, dass ich seit mehren Jahren nun auf meinen Heimrechnern Linux nutze und auch zwei Server im Einsatz habe.
-Schon immer habe ich lieber die Unix-Bash genutzt als mich durch Graphische Oberflächen zu hangeln, und seit Zwei Monaten habe ich nun auch zsh im Einsatz.
-Meine Übungsblätter für die verschiedenen Vorlesungen, texe ich schon seit dem ersten Semester, und habe \LaTeX  auch schon für meine Seminararbeit genutzt.
+Vorkenntnise habe ich in soweit, dass ich seit mehreren Jahren auf meinen Heimrechnern Linux nutze und auch zwei Server im Einsatz habe.\\
+Schon immer habe ich lieber die \glqq bash\grqq genutzt als mich durch Graphische Oberflächen zu hangeln. Seit zwei Monaten habe ich auch \glqq zsh\grqq im Einsatz.\\
+Meine Übungsblätter für die verschiedenen Vorlesungen, texe ich schon seit dem ersten Semester, und habe \LaTeX{} auch schon für meine Seminararbeit genutzt.
+
+Über eine Einladung zum Auswahlgespräch würde ich mich sehr freuen.\\
 
 
 \bigskip
@@ -88,6 +95,7 @@ Meine Übungsblätter für die verschiedenen Vorlesungen, texe ich schon seit de
 \section{Ausbildung}
 % arguments 3 to 6 can be left empty
 \cventry{09/10--04/18}{Abitur}{Friedrich-Koenig-Gymnasium}{Würzburg}{\textit{Note: "`2,7"'}}{Allgemeine Hochschulreife}
+\cventry{seit 10/18}{Studium}{Julius-Maximilians-Universität}{Würzburg}{Studium der Informatik}{}
 
 %\section{Masterarbeit}
 %\cvitem{Thema}{\emph{Pressures Produced When Penguins Pooh -- Calculations on Avian Defaecation", Note: 1,0}}
@@ -99,7 +107,7 @@ Meine Übungsblätter für die verschiedenen Vorlesungen, texe ich schon seit de
 %\cvitem{Betreuer}{Prof. Dr. Andreas Code, Dipl.-Ing. Johan Github}
 %\cvitem{Abstrakt}{Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.}
 
-\newpage
+%\newpage
 
 %\section{Berufserfahrung}
 %\cventry{07/03--02/04}{Werkstudent}{Fraunhofer-Institut für Pinguinkunde}{Tuxhausen}{}{Mitarbeit im Labor: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.}
@@ -107,7 +115,7 @@ Meine Übungsblätter für die verschiedenen Vorlesungen, texe ich schon seit de
 
 \section{Praktika}
 %\cventry{10/01--04/02}{Fachpraktikum}{Tux GmbH}{Debianstadt}{}{Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.}
-\cventry{}{Grundpraktikum}{Zentrum für Angewandte Energieforschung}{Würzburg}{}{}
+\cventry{}{Grundpraktikum}{\\Zentrum für Angewandte Energieforschung}{Würzburg}{}{}
 
 %\section{Soziales Engagement}
 %\cventry{10/91--06/92}{Linux-Nachhilfe}{}{Tuxdorf}{}{Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.}
@@ -119,8 +127,10 @@ Meine Übungsblätter für die verschiedenen Vorlesungen, texe ich schon seit de
 %\cvitemwithcomment{Portugisisch}{Grundkenntnisse}{}
 
 \section{EDV}
-\cvdoubleitem{Betriebssysteme}{Linux(Arch,Ubuntu,Debian), Windows}{Programmieren}{Java, C}
-\cvdoubleitem{Office}{Microsoft Office, LibreOffice}{Textsatz}{\LaTeX}
+\cvitem{Betriebssysteme}{Linux (Arch, Ubuntu, Debian), Windows}
+\cvitem{Programmieren}{Java, C}
+\cvitem{Office}{Microsoft Office, LibreOffice}
+\cvitem{Textsatz}{\LaTeX}
 
 %\section{Referenzen}
 %\cvitem{Prof. Dr.-Ing. habil. Tom Tuxer}{Fraunhofer Institut für Pinguinkunde, tom.tuxer@pingu.edu, (098)~7654~321}
