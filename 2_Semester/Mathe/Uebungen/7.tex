@@ -44,6 +44,8 @@
 
 \begin{document}
 
+  \maketitle
+
   \section*{Aufgabe 1}
 
     \begin{enumerate}[a)]
@@ -102,6 +104,8 @@
     \end{align*}
     $\Rightarrow \frac{1}{1-z-z^2+z^3} = \frac{0,25}{\left(z+1\right)} - \frac{0,25}{\left(z-1\right)}+ \frac{0,5}{\left(z-1\right)^2}$
 
+    \newpage
+
   \section*{Aufgabe 3}
 
     \begin{enumerate}[a)]
@@ -109,7 +113,7 @@
       $z=1:1^3-i-1+i=0?$\\
       $\left(z^3-iz^2-z+i\right):\left(z-1\right)=z^2-iz+z-i$
       \begin{align*}
-        z_{1/2}=\frac{-\left(-i+1\right)\pm\sqrt{\left(-i+1\right)^2-4-\left(-i\right)}}{2}\\
+        z_{1/2}&=\frac{-\left(-i+1\right)\pm\sqrt{\left(-i+1\right)^2-4-\left(-i\right)}}{2}\\
         &=\frac{i-1\pm\sqrt{1-2i-1+4i}}{2}\\
         &=\frac{i-1\pm\sqrt{2i}}{2}\\
         &=\frac{i-1\pm\left(i+1\right)}{1}\\
@@ -123,7 +127,7 @@
       \begin{align*}
         a\cdot\left(1-i\right)\left(2\right)+b\left(0\right)\left(2\right)+c\left(0\right)\left(1-i\right)&=1\\
         2a\left(1-i\right)&=1\\
-        2a-2ai=1\\
+        2a-2ai&=1\\
         a&=\frac{1}{2\left(1-i\right)}=\frac{1}{2-2i}
       \end{align*}
       Sei $z=i$
@@ -134,10 +138,11 @@
       \end{align*}
       Sei $z=-1$
       \begin{align*}
-        a\cdot\left(2\right)\left(0\right)+b\cdot\left(2\right)\left(0\right)+c\left(-2\right)\left(-1-i\right)&=1\\
+        a\cdot\left(z\right)\left(0\right)+b\cdot\left(z\right)\left(0\right)+c\left(-z\right)\left(-1-i\right)&=1\\
         -2c\left(-1-i\right)&=1\\
-        c&=\frac{1}{\left(-2\right)\left(-1-i\right)}=\frac{1}{2+2i}\\
-        \frac{\frac{1}{2-2i}}{z-1}+\frac{\frac{1}{\left(i-1\right)\left(i+1\right)}}{z-i}+\frac{\frac{1}{2+2i}}{z+1}&=\frac{1}{}\\
+        c&=\frac{1}{\left(-z\right)\left(-1-i\right)}=\frac{1}{z+zi}\\
+        &=\frac{\frac{1}{z-zi}}{z-1}+\frac{\frac{1}{\left(i-1\right)\left(i+1\right)}}{z-i}+\frac{\frac{1}{z+zi}}{z+1}
+        \\&=\frac{1}{(z-zi)(z-1)+(i-1)(i+1)(z-i)+(z+zi)(z+1)}\\
     \end{align*}
     \begin{equation*}
         =\frac{1}{\left(z-zi\right)\left(z-1\right)}+\frac{1}{\left(i-1\right)\left(i+1\right)\left(z-i\right)}+\frac{1}{\left(z+zi\right)\left(z+1\right)}
@@ -162,7 +167,7 @@
       \end{align*}
       Sei $z=i$
       \begin{align*}
-        a\cdot 0+b\cdot 0+c\cdot i^2 \cdot \left(2i\right)+d\cdot 0&=i-1
+        a\cdot 0+b\cdot 0+c\cdot i^2 \cdot \left(2i\right)+d\cdot 0&=i-1\\
         c&=\frac{i-1}{-\left(2i\right)}
       \end{align*}
       Sei $z=-i$
