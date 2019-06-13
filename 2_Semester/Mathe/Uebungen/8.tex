@@ -1,0 +1,57 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{xfrac}
+\usepackage{marvosym}
+
+\usepackage{enumerate}
+
+\usepackage{fancyhdr}
+
+\usepackage{array}   % for \newcolumntype macro
+\newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
+\newcommand{\Aufgabe}[1]{\section*{Aufgabe #1}}
+
+
+\pagestyle{fancy}
+
+\fancyhf[HR]{Lukas Vormwald, Noah Mehling, Gregor Seewald}
+\fancyhf[HL]{Übung:Dienstag 12:00}
+
+\title{Mathematik für Informatiker 2\\Übungsblatt 7}
+\author{Lukas Vormwald \and Noah Mehling \and Gregor Seewald}
+\date{Übung 5:Dienstag 12:00}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+\begin{document}
+
+\maketitle
+
+  \Aufgabe{1}
+
+  \Aufgabe{2}
+    \begin{enumerate}[a)]
+      \item Da p ungerade, ist $f'$ und $f''$ immer gleich $0$, da $p\geq 2$, daraus folgt $f''=0$ und damit ist die hinreichende Bedingung aus dem Satz 12.18 verletzt.
+    \end{enumerate}
+
+\end{document}

@@ -15,6 +15,7 @@
 
 \usepackage{array}   % for \newcolumntype macro
 \newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
+\newcommand{\Aufgabe}[1]{\section*{Aufgabe #1}}
 
 
 \pagestyle{fancy}
@@ -46,7 +47,8 @@
 
   \maketitle
 
-  \section*{Aufgabe 1}
+  %\section*{Aufgabe 1}
+  \Aufgabe{1}
 
     \begin{enumerate}[a)]
       \item
