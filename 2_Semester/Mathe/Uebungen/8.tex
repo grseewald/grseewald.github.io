@@ -23,7 +23,7 @@
 \fancyhf[HR]{Lukas Vormwald, Noah Mehling, Gregor Seewald}
 \fancyhf[HL]{Übung:Dienstag 12:00}
 
-\title{Mathematik für Informatiker 2\\Übungsblatt 7}
+\title{Mathematik für Informatiker 2\\Übungsblatt 8}
 \author{Lukas Vormwald \and Noah Mehling \and Gregor Seewald}
 \date{Übung 5:Dienstag 12:00}
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
@@ -47,11 +47,18 @@
 
 \maketitle
 
-  \Aufgabe{1}
-
   \Aufgabe{2}
     \begin{enumerate}[a)]
-      \item Da p ungerade, ist $f'$ und $f''$ immer gleich $0$, da $p\geq 2$, daraus folgt $f''=0$ und damit ist die hinreichende Bedingung aus dem Satz 12.18 verletzt.
+      \item Unter Beachtung der Bedingung gilt, dass die ersten beiden Ableitung immer gleich $0$ sind, $p$ jedoch immer $\geq 3$ dies steht im Widerspruch zu der der hinreichenden Bedingung einer Extremstelle aus Satz 12.18.
+
+      %\item Da p ungerade, ist $f'$ und $f''$ immer gleich $0$, da $p\geq 2$, daraus folgt $f''=0$ und damit ist die hinreichende Bedingung aus dem Satz 12.18 verletzt.
+
+      \item Bei Ableitungen wiederholen sich Extrem- und Nullstellen, d.h. hat eine Funktion in ihrer 4. Ableitung ein Extremum, so hat sie in der 3. und 5. Ableitung an der selben Stelle eine Nullstelle. Wenn nun eine Funktion in ihrer $p$.-ten Ableitung am Punkt $x_0$ ein Maximum (Minimum), und ist $p$ gerade, so hat $f$ bei $x_0$ auch ein striktes lokales Maximum (Minimum).
+    \end{enumerate}
+
+  \Aufgabe{3}
+    \begin{enumerate}[a)]
+      \item Da die Funktion $f$ stetig differenzierbar ist, ist ihre Ableitung stetig. Somit existiert die Beziehung $\abs{x -\hat{x}}<\delta \to \abs{f(x)-f(\hat{x})}<\epsilon$. Daher und aufgrund der Tatsache, dass das Intervall offen ist, existiert immer ein $\delta > 0$, auf das die Beziehung anwendbar ist. Somit existiert auch ein $\epsilon$, welches kleiner als $\abs{\frac{f‘(\hat{x})}{2}}$ ist. Ist das dazugehörige $\delta$ innerhalb von $I$ so ist die Aussage gezeigt. Ist das dazugehörige $\delta$ kein Teil des Intervalls, so kann $\epsilon$ verkleinert werden, da dies die Aussage nur verschärft.
     \end{enumerate}
 
 \end{document}
