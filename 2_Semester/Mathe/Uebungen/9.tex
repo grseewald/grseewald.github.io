@@ -48,7 +48,9 @@
 \maketitle
 
   \Aufgabe{1}
-    $P(x)=(x-x_0)\cdot q(x)$
+    $P(x)=(x-x_0)\cdot q(x)=(x-x_0)(x-x_1)...(x-x_{j-1})(x-x_{j+1})...(x-x_n)$\\
+    $P(x_j)=1\Rightarrow(x_j-x_0)q(x)=\underbrace{(x_j-x_0)(x_j-x_1)...(x_j-x_{j-1})}_{\neq 0 \text{ da paarweise verschieden}}a=1$\\
+    $\Rightarrow a=\frac{1}{(x-x_0)(g(x))}=$Lagrangebasis
 
   \Aufgabe{2}
     $P(x)=a_0+a_1x+a_2x^2+a_3x^3\qquad P'(x)=a_1+a_22x$\\
@@ -91,7 +93,7 @@
           2&=3+a_1+a_2 & 2&=3+4-2a_2+a_2\\
           4&=a_1+2a_2 & 3a_2=5\\
           a_1&=4-2a_2 & a_2=\frac{5}{3}\\
-          &\Rightarrow a_1=4-\frac{10}{3}\approx 0,9 
+          &\Rightarrow a_1=4-\frac{10}{3}\approx 0,9
         \end{align*}
       \end{enumerate}
 
