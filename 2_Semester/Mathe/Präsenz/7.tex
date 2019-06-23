@@ -1,0 +1,60 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{xfrac}
+\usepackage{marvosym}
+
+\usepackage{enumerate}
+
+\usepackage{fancyhdr}
+
+\usepackage{array}   % for \newcolumntype macro
+\newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
+\newcommand{\Aufgabe}[1]{\section*{Aufgabe #1}}
+
+
+\pagestyle{fancy}
+
+\fancyhf[HR]{Lukas Vormwald, Noah Mehling, Gregor Seewald}
+\fancyhf[HL]{Übung:Dienstag 12:00}
+
+\title{Mathematik für Informatiker 2\\Übungsblatt 8}
+\author{Lukas Vormwald \and Noah Mehling \and Gregor Seewald}
+\date{Übung 5:Dienstag 12:00}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+\begin{document}
+
+  Es sei $\mathbb{K}$ ein $\mathbb{K}=\mathbb{R}$\\
+  Einfaches Nachrechnen zeigt die Polynomfunktion mit Grad $\leq n$\\
+  $p:\mathbb{R}\to\mathbb{R}$ mit $p(x)=a_nx^n+...+a_1x+a_0\qquad a_i\in\mathbb{R},i=1...n$\\
+  bilden einen Vektorraum.\\
+  Das additiv neutrale Element \underline{ist das Nullpolynom/die Nullfunktion}\\
+  \paragraph{Aufgabe:}
+    Zeige, dass $\left\lbrace \tilde{p_0}=1,\tilde{p_1}=x,\tilde{p_2}=x^2\right\rbrace$\\
+    und\\
+    $\left\lbrace p_0(x)=(x-1)(x+1),p_1(x)=x(x+1),p_2(x)=x(x-1)\right\rbrace$\\
+    eine Basis von $\mathbb{P}_2 bilden$\\
+
+
+\end{document}

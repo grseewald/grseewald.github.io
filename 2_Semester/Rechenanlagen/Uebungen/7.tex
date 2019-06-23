@@ -1,0 +1,74 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{xfrac}
+
+\usepackage{xcolor}
+
+\usepackage{enumerate}
+
+\usepackage{fancyhdr}
+
+\usepackage{graphicx}
+
+\usepackage{listings}
+
+\usepackage{tikz}
+
+\pagestyle{fancy}
+
+\fancyhf[HR]{Lukas Vormwald, Noah Mehling, Gregor Seewald}
+\fancyhf[HL]{Übung:Dienstag 14:00}
+
+\title{Rechenanlagen\\Übungsblatt 5}
+\author{Lukas Vormwald \and Noah Mehling \and Gregor Seewald}
+\date{Übung :Dienstag 14:00}
+
+\newcommand{\nor}[0]{\ensuremath{\text{ nor }}}
+\newcommand{\Aufgabe}[1]{\section{Aufgabe #1}}
+
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+\begin{document}
+
+\maketitle
+
+  \Aufgabe{1}
+
+    \begin{align*}
+      d&=\left(\overline{abc}\right)=\bar{a}\vee\bar{b}\vee\bar{c}\\
+      e&=\left(\overline{ah}\right)=\bar{a}\vee\bar{h}\\
+      f&=\left(\overline{bh}\right)=\bar{b}\vee\bar{h}\\
+      g&=\left(\overline{ch}\right)=\bar{c}\vee\bar{h}\\
+      h&=\left(\overline{defg}\right)\\
+      &=\bar{d}\vee\bar{e}\vee\bar{f}\vee\bar{g}\\
+      &=\left(abc\right)\vee\left(ah\right)\vee\left(bh\right)\vee\left(ch\right)\\
+      &=\left(abc\right)\vee\left(a\vee b\vee c\right)h\\
+    \end{align*}
+    $\rightarrow$ stabil sind nur Belegungen mit $a,b,c=1$ oder $a,b,c=0$, da sonst der Wahrheitswert von h abhängt und somit nicht der Auswertung der Funktion $\left(abc\right)$ entspricht (immer $0$) für $a,b,c\neq 1,0$
+
+  \Aufgabe{2}
+
+    \input{tesseract/tesseract1.tex}
+    \input{tesseract/tesseract2.tex}
+\end{document}
