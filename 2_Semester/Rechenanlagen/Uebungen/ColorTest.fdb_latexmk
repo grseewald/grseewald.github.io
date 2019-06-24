@@ -1,0 +1,22 @@
+# Fdb version 3
+["pdflatex"] 1561304378 "ColorTest.tex" "ColorTest.pdf" "ColorTest" 1561304379
+  "/etc/texmf/web2c/texmf.cnf" 1561210974 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1480098733 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1480098806 71627 94eb9990bed73c364d7f53f960cc8c5b ""
+  "/usr/share/texlive/texmf-dist/tex/latex/base/article.cls" 1523050425 19823 fcbc01552b07b608574cbf8e1977e0c0 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo" 1523050425 8294 b0f177401f895563eb19304d2389582d ""
+  "/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty" 1525471853 10954 7abea5892090bbad1d7b16fb2ed4fe8b ""
+  "/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg" 1480098830 1213 620bba36b25224fa9b7e1ccb4ecb76fd ""
+  "/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def" 1515537368 17334 520b9b85ad8a2a48eda3f643e27a5179 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty" 1525471425 13555 1c149904152e53130811b31763000c97 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty" 1480098843 55589 34128738f682d033422ca125f82e5d62 ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1535076666 32752 ce45b90d2fda49befaa367e6f5986072 ""
+  "/usr/share/texmf/web2c/texmf.cnf" 1535076666 32752 ce45b90d2fda49befaa367e6f5986072 ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1556022864 2885931 54a0ba4e594f83ea336338297f8ab976 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1561211878 4218988 e1b015ba00c6c6a151c857ac84247d9d ""
+  "ColorTest.aux" 1561304379 8 a94a2480d3289e625eea47cd1b285758 ""
+  "ColorTest.tex" 1561304378 217 2bcaaf09540fd75f39fc11193e201c3c ""
+  (generated)
+  "ColorTest.log"
+  "ColorTest.pdf"
+  "ColorTest.aux"

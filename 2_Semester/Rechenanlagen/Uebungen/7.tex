@@ -8,7 +8,9 @@
 \usepackage{mathtools}
 \usepackage{xfrac}
 
-\usepackage{xcolor}
+\usepackage{color}
+\usepackage[table]{xcolor}
+\definecolor{blue}{RGB}{0,0,129}
 
 \usepackage{enumerate}
 
@@ -25,7 +27,7 @@
 \fancyhf[HR]{Lukas Vormwald, Noah Mehling, Gregor Seewald}
 \fancyhf[HL]{Übung:Dienstag 14:00}
 
-\title{Rechenanlagen\\Übungsblatt 5}
+\title{Rechenanlagen\\Übungsblatt 7}
 \author{Lukas Vormwald \and Noah Mehling \and Gregor Seewald}
 \date{Übung :Dienstag 14:00}
 
@@ -71,4 +73,42 @@
 
     \input{tesseract/tesseract1.tex}
     \input{tesseract/tesseract2.tex}
+
+  \Aufgabe{3}
+
+    \begin{enumerate}[1.]
+      \item
+        \begin{tabular}{|cc|c|c|c|c|} \hline
+          &a&0&0&1&1\\ \hline
+          &b&0&1&1&0\\ \hline
+          c&d&&&&\\ \hline
+          0&0&&1&1&\\ \hline
+          0&1&&&&\\ \hline
+          1&1&1&1&&\\ \hline
+          1&0&1&1&1&1\\ \hline
+        \end{tabular}\\\\
+        $c\bar{d}\vee\bar{a}cd\vee b\overline{cd}$
+        \item
+          \begin{tabular}{|cc|c|c|c|c|} \hline
+            &a&0&0&1&1\\ \hline
+            &b&0&1&1&0\\ \hline
+            c&d&&&&\\ \hline
+            0&0&1&&&1\\ \hline
+            0&1&&1&&\\ \hline
+            1&1&&&1&\\ \hline
+            1&0&1&&1&1\\ \hline
+          \end{tabular}\\\\
+          $\overline{abd}\vee a\overline{bd}\vee abc \vee \bar{a}b\bar{c}d$
+        \item
+          \begin{tabular}{|cc|c|c|c|c|} \hline
+            &a&0&0&1&1\\ \hline
+            &b&0&1&1&0\\ \hline
+            c&d&&&&\\ \hline
+            0&0&1&1&1&\\ \hline
+            0&1&1&1&1&1\\ \hline
+            1&1&1&1&1&1\\ \hline
+            1&0&&1&1&\\ \hline
+          \end{tabular}\\\\
+          $a\bar{b}d\vee\overline{ab}d\vee b \vee \overline{abcd}$
+    \end{enumerate}
 \end{document}

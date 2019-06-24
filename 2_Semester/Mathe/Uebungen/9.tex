@@ -48,9 +48,18 @@
 \maketitle
 
   \Aufgabe{1}
-    $P(x)=(x-x_0)\cdot q(x)=(x-x_0)(x-x_1)...(x-x_{j-1})(x-x_{j+1})...(x-x_n)$\\
-    $P(x_j)=1\Rightarrow(x_j-x_0)q(x)=\underbrace{(x_j-x_0)(x_j-x_1)...(x_j-x_{j-1})}_{\neq 0 \text{ da paarweise verschieden}}a=1$\\
-    $\Rightarrow a=\frac{1}{(x-x_0)(g(x))}=$Lagrangebasis
+    $P(x)=(x-x_0)\cdot q(x)=(x-x_0)(x-x_1)...(x-x_{j-1})(x-x_{j+1})...(x-x_n)\cdot a$\\
+    $P(x_j)=1\Rightarrow(x_j-x_0)q(x)=\underbrace{(x_j-x_0)(x_j-x_1)...(x_j-x_{j-1})}_{\neq 0 \text{ da paarweise verschieden}}\cdot a=1$\\
+    $\Rightarrow a=\frac{1}{(x-x_0)(g(x))}=$Lagrangebasis\\
+    mit $a$ Polynom von Grad $n-n=0\Rightarrow$ Konstant\\
+    \paragraph{2.Teil}\\
+    Aufgrung von Lemma 14.1. lässt sich ein beliebiges Polynom $q(x)$ angeben.\\
+    Nun stellt man eine Interpolationsaufgabe $q(x)$ mit $y_j=p(x_j)$\\
+    Nach 14.1. lässt sich $P(x)$ schreiben als\\
+    $P(x)=\sum\limits_{j=0}^{n}y_jI_\xi(x)\in\mathbb{P}_n$\\
+    Nach Satz 14.1. ist diese Lösung eindeutig. Somit ist $P(x)=q(x)$ und $y_j$ eine Basis des Lösungsraums, da $I_j$ als linearkombination dargestellt werden kann.
+
+    \newpage
 
   \Aufgabe{2}
     $P(x)=a_0+a_1x+a_2x^2+a_3x^3\qquad P'(x)=a_1+a_22x$\\
@@ -64,6 +73,8 @@
     $a_3=\frac{y_3-y_0-\left(\frac{y_2-\frac{y_1-y_0}{(x_1-x_0)}}{2x}\right)(x_1-x_0)(x_1)}{(x_2-x_1)(x_2-x_0)}$
 
     Da $a_0 ... a_3$ Vorfaktoren der Standardbasis sind, ist dies ebenfalls eine Basis des $\mathbb{P}$
+
+    \newpage
 
     \Aufgabe{3}
 
@@ -96,5 +107,30 @@
           &\Rightarrow a_1=4-\frac{10}{3}\approx 0,9
         \end{align*}
       \end{enumerate}
+      \newpage
+
+      \Aufgabe{4}
+
+        \begin{enumerate}[a)]
+          \item Sei $f: [a,b] \to {\bf R}$ $(n+1)$-mal stetig differenzierbar. Dann hat das Restglied $R_nf := f - L_n f$ bei der Polynominterpolation an $n+1$ paarweise verschiedenen Stützstellen $x_0,...,x_n \in [a,b]$ die Lagrangesche Darstellung
+          \begin{equation*}
+            (R_n f)(x) = \frac{f^{(n+1)} ( \xi )}{(n+1) !} \prod_{j=0}^n (x-x_j),\quad x \in [a,b]
+          \end{equation*}
+          mit einer von der Entwicklungsstelle $x$ abhängigen Stelle  $\xi \in [a,b]$.
+          Ist x selbst Stützstelle, so ist die Aussage erfüllt. Sei nun
+          \begin{equation*}
+            \omega _{n+1} (x) := \prod_{j=0}^n (x-x_j)
+          \end{equation*}
+          und für festes, aber beliebiges $x \in [a,b], x \ne x_j,  j=0,...,n$ eine Hilfsfunktion $g: [a,b] \to {\bf R}$ definiert durch
+          \begin{equation*}
+            g(y):= f(y)-(L_n f)(y) - \omega _{n+1} (y) \frac{f(x)-(L_n f)(x)}{ \omega _{n+1}(x)},y \in [a,b] .
+          \end{equation*}
+          Nach den Voraussetzungen an $f$ ist $g$ $(n+1)$-mal stetig differenzierbar. Ferner hat $g$ die $n+2$ Nullstellen $x,x_0,\dots,x_n$. Der Satz von Rolle besagt nun, dass die Ableitung $g'$ zwischen zwei Nullstellen von $g$ wieder eine Nullstelle besitzt. Damit hat $g'$ $n+1$ paarweise verschiedene Nullstellen auf $[a,b]$. Sukzessive Wiederholung dieses Arguments ergibt, dass $g^{(n+1)}$ eine Nullstelle  $\xi$  in $[a,b]$ hat. Man berechnet
+          \begin{equation*}
+            0 = g^{(n+1)} ( \xi ) = f^{(n+1)} ( \xi ) - (n+1)! \frac{(R_n f)(x)}{ \omega_{n+1} (x) }
+          \end{equation*}
+          und erhält die Behauptung.
+          \item Hier können wir die Formel aus a verwenden, da alle Vorraussetzungen erfüllt sind. Da wir 4 Stützstellen, also $n+1$ mit $n=3$, besitzen. Sie ist laut Aufgabenstellung $n+1$-mal stetig differenzierbar und die Stützstellen sind paarweise verschieden und gleichen einem $f(x_i)$ mit $i=0,\dots,3$
+        \end{enumerate}
 
 \end{document}
