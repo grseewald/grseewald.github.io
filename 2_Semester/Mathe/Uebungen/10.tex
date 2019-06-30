@@ -13,6 +13,8 @@
 
 \usepackage{fancyhdr}
 
+\usepackage{tikz}
+
 \usepackage{array}   % for \newcolumntype macro
 \newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
 \newcommand{\Aufgabe}[1]{\section*{Aufgabe #1}}
@@ -85,7 +87,7 @@
     \begin{align*}
       P(B)&=0,99\cdot 0,3 + 0,01 \cdot 0,5 = 0,302 =30,2 \%\\
       P(A \cap B)&= 0,99 \cdot 0,3 \cdot 0,8 + 0,01 \cdot 0,5 \cdot 0,2 = 0,2386 = 23,86 \%\\
-      P(A|B)&=\frac{P(A \cap B)}{P(B)} = \frac{23,86 \%}{30,2 \%} \approx 79 \% 
+      P(A|B)&=\frac{P(A \cap B)}{P(B)} = \frac{23,86 \%}{30,2 \%} \approx 79 \%
     \end{align*}
 
 \end{document}
