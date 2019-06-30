@@ -1,0 +1,58 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{xfrac}
+\usepackage{marvosym}
+
+\usepackage{enumerate}
+
+\usepackage{fancyhdr}
+
+\usepackage{array}   % for \newcolumntype macro
+\newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
+\newcommand{\Aufgabe}[1]{\section*{Aufgabe #1}}
+
+
+\pagestyle{fancy}
+
+\fancyhf[HR]{Lukas Vormwald, Noah Mehling, Gregor Seewald}
+\fancyhf[HL]{Übung:Dienstag 12:00}
+
+\title{Mathematik für Informatiker 2\\Übungsblatt 9}
+\author{Lukas Vormwald \and Noah Mehling \and Gregor Seewald}
+\date{Übung 5:Dienstag 12:00}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+\begin{document}
+
+\maketitle
+
+  \Aufgabe{1}
+    $\Omega=\lb(i_1,i_2,i_3)|1 \leq i_j \leq 10 \text{ für }j=1,2,3\rb$
+  \begin{enumerate}[a)]
+    \item $\abs{\Omega}=10^3=100$\\
+    $P=\frac{1}{100}$
+  \item $E_1:=\lb (i_1,i_2,i_3)|1\leqi_j\leq 3 \text{ für } j=1,2,3\rb$
+  $P(E_1)=\frac{3}{10}$
+  \end{enumerate}
+\end{documetn}
