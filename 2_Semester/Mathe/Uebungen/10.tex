@@ -16,6 +16,8 @@
 \usepackage{array}   % for \newcolumntype macro
 \newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
 \newcommand{\Aufgabe}[1]{\section*{Aufgabe #1}}
+\newcommand{\lb}[0]{\ensuremath{\left\lbrace}}
+\newcommand{\rb}[0]{\ensuremath{\right\rbrace}}
 
 
 \pagestyle{fancy}
@@ -23,7 +25,7 @@
 \fancyhf[HR]{Lukas Vormwald, Noah Mehling, Gregor Seewald}
 \fancyhf[HL]{Übung:Dienstag 12:00}
 
-\title{Mathematik für Informatiker 2\\Übungsblatt 9}
+\title{Mathematik für Informatiker 2\\Übungsblatt 10}
 \author{Lukas Vormwald \and Noah Mehling \and Gregor Seewald}
 \date{Übung 5:Dienstag 12:00}
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
@@ -52,7 +54,38 @@
   \begin{enumerate}[a)]
     \item $\abs{\Omega}=10^3=100$\\
     $P=\frac{1}{100}$
-  \item $E_1:=\lb (i_1,i_2,i_3)|1\leqi_j\leq 3 \text{ für } j=1,2,3\rb$
-  $P(E_1)=\frac{3}{10}$
+  \item $E_1:=\lb (i_1,i_2,i_3)|1\leq i_j\leq 3 \text{ für } j=1,2,3\rb$\\
+  $\null \qquad P(E_1)=\frac{3}{10} \cdot \frac{3}{10} \cdot \frac{3}{10}=0,027=2,7\%$\\
+
+  $E_2:=\lb (i_1,i_2,i_3)| 1 \leq i_1 \leq 3, 4 \leq j_i \leq 10 \text{ für } j=2,3\rb$\\
+  $\null \qquad P(E_2)=\frac{3}{10} \cdot \frac{7}{10} \cdot \frac{7}{10}=0,147=14,7\%$\\
+
+  $E_3:=\lb (i_1,i_2,i_3) | 1 \leq i_1 \leq 3 \rb$\\
+  $\null \qquad P(E_3)=\frac{3}{10} \cdot 1 \cdot 1=0,3=30\%$\\
+
+  $E_4:=\lb (i_1,i_2,i_3) | 1 \leq i_2 \leq 3 \rb$\\
+  $\null \qquad P(E_4)=P(E_3)=30\%$\\
+
+  \item $P(E_1 \cup E_2) = P(E_3) = 30\%$\\
+  $P(E_2 \cup E_3) = P(E_3) = 30 \%$\\
+  $F:=\lb (i_1,i_2,i_3) | 1 \leq i_1 \leq 3 \text{ oder } 1 \leq i_2 \leq 3 \text{ oder } 1 \leq i_3 \leq 3\rb$\\
+  $P(F)=\frac{3}{10} \cdot 1 \cdot 1 + 1 \cdot \frac{3}{10} \cdot 1 + 1 \cdot 1 \cdot \frac{3}{10} = 0,3 + 0,3 + 0,3 = 0,9 = 90\%$
   \end{enumerate}
-\end{documetn}
+  \newpage
+  \Aufgabe{2}
+    $\frac{ {10\choose 3} \cdot {20\choose 3} }{{30\choose 6}} + \frac{ {10\choose 4} \cdot {20\choose 2} }{{30\choose 6}} + \frac{ {10\choose 5} \cdot {20\choose 1} }{{30\choose 6}} + \frac{ {10\choose 6} \cdot {20\choose 0} }{{30\choose 6}} = \frac{2426}{7917} \approx 0,306 = 30,6\%$
+
+  \Aufgabe{3}
+    $\abs{B_K}=0,004N\qquad\abs{B_g}=0,996N$\\
+    $A$ ist erkannte Bombe\\
+    $(A \cap B_K) = 0,98\abs{B_K}$\\
+    $P(B_K|A)=\frac{P(A \cap B_K)}{P(A)}=\frac{0,98 \cdot 0,004}{0,98 \cdot 0,004 + 0,01 \cdot 0,996}=\frac{98}{347}\approx0,243$
+
+  \Aufgabe{4}
+    \begin{align*}
+      P(B)&=0,99\cdot 0,3 + 0,01 \cdot 0,5 = 0,302 =30,2 \%\\
+      P(A \cap B)&= 0,99 \cdot 0,3 \cdot 0,8 + 0,01 \cdot 0,5 \cdot 0,2 = 0,2386 = 23,86 \%\\
+      P(A|B)&=\frac{P(A \cap B)}{P(B)} = \frac{23,86 \%}{30,2 \%} \approx 79 \% 
+    \end{align*}
+
+\end{document}
