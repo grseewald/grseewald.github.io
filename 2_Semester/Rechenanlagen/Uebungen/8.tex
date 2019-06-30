@@ -1,0 +1,73 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{xfrac}
+
+\usepackage{color}
+\usepackage[table]{xcolor}
+\definecolor{blue}{RGB}{0,0,129}
+
+\usepackage{enumerate}
+
+\usepackage{fancyhdr}
+
+\usepackage{graphicx}
+
+\usepackage{listings}
+
+\usepackage{tikz}
+
+\pagestyle{fancy}
+
+\fancyhf[HR]{Lukas Vormwald, Noah Mehling, Gregor Seewald}
+\fancyhf[HL]{Übung:Dienstag 14:00}
+
+\title{Rechenanlagen\\Übungsblatt 7}
+\author{Lukas Vormwald \and Noah Mehling \and Gregor Seewald}
+\date{Übung :Dienstag 14:00}
+
+\newcommand{\nor}[0]{\ensuremath{\text{ nor }}}
+\newcommand{\Aufgabe}[1]{\section{Aufgabe #1}}
+
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+\begin{document}
+
+\maketitle
+
+  \Aufgabe{1}
+
+    \begin{tabular}{|c|c|c||c|}\hline
+      B&L&R&K\\ \hline \hline
+      0&0&0&0\\ \hline
+      0&0&1&1\\ \hline
+      0&1&0&1\\ \hline
+      0&1&1&0\\ \hline
+      1&0&0&0\\ \hline
+      1&0&1&$x$\\ \hline
+      1&1&0&$x$\\ \hline
+      1&1&1&1\\ \hline
+
+    \end{tabular}
+
+\end{document}

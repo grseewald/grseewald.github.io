@@ -16,6 +16,7 @@
 \usepackage{array}   % for \newcolumntype macro
 \newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
 \newcommand{\Aufgabe}[1]{\section*{Aufgabe #1}}
+\newcommand{\meth}[1]{\ensuremath{\mathbb{#1}}}
 
 
 \pagestyle{fancy}
@@ -55,6 +56,18 @@
     und\\
     $\left\lbrace p_0(x)=(x-1)(x+1),p_1(x)=x(x+1),p_2(x)=x(x-1)\right\rbrace$\\
     eine Basis von $\mathbb{P}_2 bilden$\\
+  \paragraph{Lösung zur ersten Menge:}
+    Lineare Unabhängigkeit\\
+    Die Polynomefunktion $\tilde{p_0},\tilde{p_1},\tilde{p_2}$ sind linear unabhängig, da mit $\lambda_0,\lambda_1,\lambda_2\in\mathbb{R}$ und\\
+    $0=\lambda_0 p_0(x)+\lambda_1 p_1(x)+\lambda_2 p_2(x)\\
+    =\lambda_0 \cdot 1 +\lambda_1 \cdot x +\lambda_2 \cdot x^2$\\
+    Dies ist nur das Nullpolynom falls $\lambda_0=\lambda_1=\lambda_2=0$\\
+    Bzw. die Nullfunktion\\
+    Erzeugenden-System dem $\meth{P}_2$ ist gerade als $\meth{P}_2=\left\lbrace a_2x^2+a_1x+a0, a_2,a_1,a_0\in\meth{R}\right\rbrace$ definiert. Also $dim\meth{P}_2=3$\\
+  \paragraph{Lösung zur zweiten Menge:}
+    s
+
+
 
 
 \end{document}

@@ -1,0 +1,120 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{xfrac}
+\usepackage{marvosym}
+
+\usepackage{enumerate}
+
+\usepackage{fancyhdr}
+
+\usepackage{soul}
+
+\usepackage{array}   % for \newcolumntype macro
+\newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
+\newcommand{\Aufgabe}[1]{\section*{Aufgabe #1}}
+\newcommand{\lb}[0]{\ensuremath{\left\lbrace}}
+\newcommand{\rb}[0]{\ensuremath{\right\rbrace}}
+
+
+\pagestyle{fancy}
+
+\fancyhf[HR]{Lukas Vormwald, Noah Mehling, Gregor Seewald}
+\fancyhf[HL]{Übung:Dienstag 12:00}
+
+\title{Präsenz 8}
+\author{Gregor Seewald}
+\date{\today}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+\begin{document}
+
+\maketitle
+
+  Aufgabe: Wir haben eine Urne mit 3 schwarzen(s), 5 weißen(w) und 7 grünen/grauen(g) Kugeln.\\
+  \begin{enumerate}[a)]
+    \item Wir ziehen einmal:
+      \begin{enumerate}[i)]
+        \item Was ist der Wahrscheinlichkeitsraum $\Omega_1$ und was ist eine sinnvolle Annahme für ein Wahrscheinlichkeitsmaß $P_1$?[Was ist $P(\left\lbrace w\right\rbrace),P(\left\lbrace s\right\rbrace),P(\left\lbrace g\right\rbrace)$]
+        \item Wie hoch ist die Wahrscheinlichkeit eine Schwarze oder eine Weiße Kugel zu ziehen?(Mit oben definiertem W-Maß.)
+        \item Modelliere das Problem aus $a)ii)$ mit Hilfe einer Zufallsvariable $\st{x}:\left\lbrace w,s,g\right\rbrace\to\mathbb{R}$
+      \end{enumerate}
+    \item Nun ziehen wir zweimal mit zurücklegen
+      \begin{enumerate}[i)]
+        \item Was ist Wahrscheinlichkeitsraum $\Omega_2$?\\
+        Was ist sinnvolles Wahrscheinlichkeitsmaß $P_2$(basierend auf $P_1$?\\
+        \item Wie hoch ist die Wahrscheinlichkeitsma
+          \begin{enumerate}[1)]
+            \item zwei weiße Kugeln zu ziehen
+            \item eine weiße und eine schwarze zu ziehen
+            \item keine weiße zu ziehen
+            \item Sind die Ergebnisse 1&2 stochastisch unabhängig
+          \end{enumerate}
+        \item Wie hoch ist die Wahrscheinlichkeit
+          \begin{enumerate}[1)]
+            \item als erstes eine Grüne zu ziehen
+            \item als zweites eine WEiße zu ziehen
+            \item Sind die Ereignisse 1&2 stochastisch unabhängig
+          \end{enumerate}
+      \end{enumerate}
+      \item Wo ist das Problem unendliches ziehen zu modellieren?
+  \end{enumerate}
+
+  \paragraph{Lösung:}
+  \begin{enumerate}[a)]
+    \item
+    \begin{enumerate}[i)]
+      \item Der Wahrscheinlichkeitsraum $\Omega_1=\left\lbrace s,w,g \right\rbrace$\\
+        Um das Wahrscheinlichkeitsmaß zu definieren definiere die Zähldichte $f:\left\lbrace s,w,g \right\rbrace \to \mathbb{R}$ als $f(w)=\frac{3}{15},f(s)=\frac{5}{15},f(g)=\frac{7}{15}$ und definiere ein $A\in\left\lbrace w,s,g \right\rbrace$, $P:2^\Omega\to[0,1]$\\
+        $P_1(A)=\sum\limits_{z\in A} f(z)$
+      \item
+      \begin{align*}
+        P_1(\left\lbrace w,s \right\rbrace)&=P_1(\lb w\rb)+P_1(\lb s \rb)\\
+        &=f(w)+f(s)\\
+        &=\frac{3}{15}+\frac{5}{15}\\
+        &=\frac{8}{15}
+      \end{align*}
+    \end{enumerate}
+    \item
+    \begin{enumerate}[i)]
+      \item Es ist \\
+      \begin{align*}
+        \Omega=\lb &s,w,g\rb^2\\
+        =\lb &(w,w),(w,s),(w,g),\\
+        &(s,w),(s,s),(s,g),\\
+        &(g,w),(g,s),(g,g) \rb
+      \end{align*}
+      Ein sinnvolles Wahrscheinlichkeitsmaß ist gegeben durch:\\
+      $P(B)=\sum\limits_{(Z_1,Z_2)\in B} P_1(\lb Z_1\rb)\cdot P_1(\lb Z_2\rb)$
+      \item \begin{enumerate}[1)]
+        \item $P_2(\lb (w,w)\rb)=P_1(\lb w \rb)\cdot P_1(\lb w\rb)=\left(\frac{5}{15}\right)^2=\frac{1}{9}$
+        \item $P_2(\lb (w,s),(s,w)\rb)=P_2(\lb (w,s)\rb)+P_2(\lb (s,w)\rb) = 2 \cdot P_1(\lb s\rb) \cdot P_1(\lb w\rb)= \frac{2}{15}$
+        \item $P_2(\lb (s,s),(s,g),(g,s),(g,g)\rb)=\frac{4}{9}$
+        \item Keine zwei weißen\\
+        $P_2(\lb (w,w)\rb^c)=1-P(\lb (w,w)\rb)$ 
+      \end{enumerate}
+    \end{enumerate}
+  \end{enumerate}
+
+
+\end{document}
