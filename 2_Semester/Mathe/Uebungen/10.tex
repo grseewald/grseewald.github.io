@@ -15,6 +15,8 @@
 
 \usepackage{tikz}
 
+\usepackage{stmaryrd}
+
 \usepackage{array}   % for \newcolumntype macro
 \newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
 \newcommand{\Aufgabe}[1]{\section*{Aufgabe #1}}
@@ -72,8 +74,16 @@
   $P(E_2 \cup E_3) = P(E_3) = 30 \%$\\
   $F:=\lb (i_1,i_2,i_3) | 1 \leq i_1 \leq 3 \text{ oder } 1 \leq i_2 \leq 3 \text{ oder } 1 \leq i_3 \leq 3\rb$\\
   $P(F)=\frac{3}{10} \cdot 1 \cdot 1 + 1 \cdot \frac{3}{10} \cdot 1 + 1 \cdot 1 \cdot \frac{3}{10} = 0,3 + 0,3 + 0,3 = 0,9 = 90\%$
-  \end{enumerate}
   \newpage
+  \item $P(E_i \cap E_j) = P(E_i) \cdot P(E_j) \qquad 1 \leq i,j \leq 4$\\
+    \begin{align*}
+      E_1\cap E_2 &\lightning\\
+      E_1\cap E_3 &= E_1\\
+      E_1\cap E_4 &= E_1\\
+      E_2\cap E_3 &= E_2\\
+      E_3\cap E_4 &&\rightarrow P(E_3\cap E_4)=\frac{3}{10}\cdot\frac{3}{10}\cdot 1 = \frac{9}{100} =30\% \cdot 30\%&= P(E_3)\cdot P(E_4)
+    \end{align*}
+  \end{enumerate}
   \Aufgabe{2}
     $\frac{ {10\choose 3} \cdot {20\choose 3} }{{30\choose 6}} + \frac{ {10\choose 4} \cdot {20\choose 2} }{{30\choose 6}} + \frac{ {10\choose 5} \cdot {20\choose 1} }{{30\choose 6}} + \frac{ {10\choose 6} \cdot {20\choose 0} }{{30\choose 6}} = \frac{2426}{7917} \approx 0,306 = 30,6\%$
 

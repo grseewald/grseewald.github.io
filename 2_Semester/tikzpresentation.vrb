@@ -1,0 +1,6 @@
+\frametitle{«In line» Ti\textit {k}Z}
+Her er noe tekst med en «in line» Ti\textit{k}Z-figur \tikz{\draw[fill=cyan]  circle(0.2);}, og her er noe tekst etterpå.
+
+\begin{verbatim}
+... \tikz{\draw[fill=cyan]  circle(0.2);} ...
+\end{verbatim}
