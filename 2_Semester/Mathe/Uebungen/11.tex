@@ -1,0 +1,139 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+%\usepackage[official]{eurosym}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{xfrac}
+\usepackage{marvosym}
+
+\usepackage{enumerate}
+
+\usepackage{fancyhdr}
+
+\usepackage{tikz}
+
+\usepackage{array}   % for \newcolumntype macro
+\newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
+\newcommand{\Aufgabe}[1]{\section*{Aufgabe #1}}
+\newcommand{\lb}[0]{\ensuremath{\left\lbrace}}
+\newcommand{\rb}[0]{\ensuremath{\right\rbrace}}
+
+
+\pagestyle{fancy}
+
+\fancyhf[HR]{Lukas Vormwald, Noah Mehling, Gregor Seewald}
+\fancyhf[HL]{Übung:Dienstag 12:00}
+
+\author{Lukas Vormwald \and Noah Mehling \and Gregor Seewald}
+\date{Übung 5:Dienstag 12:00}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\newcommand{\Uebung}[1]{\title{Mathematik für Informatiker\\ Übungsblatt #1}}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+\Uebung{11}
+
+\begin{document}
+  \maketitle
+
+  \Aufgabe{1}
+
+    \begin{enumerate}[a)]
+
+      \item   \begin{align*}
+                P(X=0)&=\frac{15}{20}                                                           &=75\%\\
+                P(X=1)&=\frac{5}{20} \cdot  \frac{15}{19}                                       &=19,74\%\\
+                P(X=2)&=\frac{5}{20} \cdot \frac{4}{19} \cdot \frac{15}{18}                     &=4,39\%\\
+                P(X=3)&=\frac{5}{20} \cdot \frac{4}{19} \cdot \frac{3}{18} \cdot \frac{15}{17}  &=0,77\%\\
+                P(X=4)&=\frac{5}{20} \cdot \frac{4}{19} \cdot \frac{3}{18} \cdot \frac{2}{17} \cdot \frac{15}{16}  &=0,097\%\\
+                P(X=5)&=\frac{5}{20} \cdot \frac{4}{19} \cdot \frac{3}{18} \cdot \frac{2}{17} \cdot \frac{1}{16} \cdot  \left( \frac{15}{15} \right)     &=0,0064\%\\
+              \end{align*}
+
+    \item     \begin{align*}
+                1 \text{\EUR} & \cdot P(X=1) & 1 \text{\EUR} & \cdot 19,74 \%\\
+                + 2 \text{\EUR} & \cdot P(X=2) & + 2 \text{\EUR} & \cdot 4,39 \%\\
+                + 3 \text{\EUR} & \cdot P(X=3) & + 3 \text{\EUR} & \cdot 0,77 \%\\
+                + 4 \text{\EUR} & \cdot P(X=4) & + 4 \text{\EUR} & \cdot 0,097 \%\\
+                + 5 \text{\EUR} & \cdot P(X=5) & + 5 \text{\EUR} & \cdot 0,0064 \%\\
+                -2 \text{\EUR}& & - 2 \text{\EUR} & = -1,6875 \text{\EUR}
+              \end{align*}
+
+    \item     \begin{align*}
+                  1 & \cdot 19,74 \%\\
+                  + 5 & \cdot 4,39 \%\\
+                  + 50 & \cdot 0,77 \%\\
+                  + 100 & \cdot 0,098 \%\\
+                  + 1544 & \cdot 0,0064 \%\\
+                  - x & \stackrel{!}{=} 0\\
+                  &= 0,9941 -x\\
+                  &\approx 99 ct
+              \end{align*}
+
+    \end{enumerate}
+
+  \Aufgabe{2}
+
+    \begin{enumerate}[a)]
+
+      \item %$1-F(k;n;p) \leq 0,001 \rightarrow k=320$
+            \begin{align*}
+              1-F(k;n;p) &\stackrel{!}{\leq} 0,01\\
+              k&=300\\
+              n&=x\\
+              p&=0,9\\
+            \end{align*}
+            Mithilfe des Computers kann man berechnen, dass $x=320$, also $n=320$ die größte Anzahl an Tickets ist, die man verkaufen kann, wobei die Wahrscheinlichkeit der Überbuchung unter $1\%$ bleibt:\\
+            \begin{align*}
+              F(300;320;0,9)&=0,9932\\
+              1-F(300;320;0,9)&=0,0068 < 0,01 = 1\%\\
+              1-F(300;321;0,9)&=0,0116 > 0,01 = 1\% \text{\Lightning}\\
+            \end{align*}
+
+      \item $1-F(318;300;0,9) = 0,002052 \approx 0,21\%$
+
+      \item Extrempunkt der Funktion bei $P(X=186)$
+
+    \end{enumerate}
+
+  \Aufgabe{3}
+
+    $x,y\in Z$\\
+    Die Anzahl der Quadrate ist $\abs{A}$, da $x,y \in Z$\\
+    $\rightarrow n^2$ ist zu großes Quadrat wenn nun die Diagonale abgezogen wird $\frac{\sqrt{2}}{2}$ ist es eine untere Abschätzung, wenn dazugenommen eine obere.
+
+  \Aufgabe{4}
+
+    \begin{enumerate}[a)]
+
+      \item
+
+      \item   \begin{align*}
+                E(X)-E(-X)&=0\\
+                E(X+X)&=0\\
+                2E(X)&=0\\
+                E(X)&=0
+              \end{align*}
+
+      \item Da die Verteilung von $X$ gleich der Verteilung von $Y$ und die Menge höchstens abzählbar ist ist die Verteilung $X+Y=2x$
+
+      \item Falsch, da z.B ein Würfelwurf mit $-1\dots -6$ als Zahlen in $lim E(X_n)< 0$ liegtm obwohl $P(X_n>0)=1$
+
+    \end{enumerate}
+\end{document}
