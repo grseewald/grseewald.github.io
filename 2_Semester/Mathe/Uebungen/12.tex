@@ -1,0 +1,92 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+%\usepackage[official]{eurosym}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{xfrac}
+\usepackage{marvosym}
+
+\usepackage{enumerate}
+
+\usepackage{fancyhdr}
+
+\usepackage{tikz}
+
+\usepackage{array}   % for \newcolumntype macro
+\newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
+\newcommand{\Aufgabe}[1]{\section*{Aufgabe #1}}
+\newcommand{\lb}[0]{\ensuremath{\left\lbrace}}
+\newcommand{\rb}[0]{\ensuremath{\right\rbrace}}
+
+
+\pagestyle{fancy}
+
+\fancyhf[HR]{Lukas Vormwald, Noah Mehling, Gregor Seewald}
+\fancyhf[HL]{Übung:Dienstag 12:00}
+
+\author{Lukas Vormwald \and Noah Mehling \and Gregor Seewald}
+\date{Übung 5:Dienstag 12:00}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\newcommand{\Uebung}[1]{\title{Mathematik für Informatiker\\ Übungsblatt #1}}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+\Uebung{12}
+
+\begin{document}
+  \maketitle
+
+    \Aufgabe{1}
+
+      \begin{align*}
+        \frac{e^{-a_y}}{k!}\cdot a_y^k \cdot \frac{e^{-a_x}}{k!} \cdot a_x^k &= \frac{e^{-(a_x+a_y)}}{k!} \cdot (a_x a_y)^k\\
+        \frac{e^{-a_y}\cdot a_y^k \cdot e^{-a_x}\cdot a_x^k}{k!} &= \frac{e^{-(a_x+a_y)}}{k!} \cdot (a_x a_y)^k\\
+        \frac{e^{-(a_y+a_x)}\cdot a_y^k \cdot a_x^k}{k!} &= \frac{e^{-(a_x+a_y)}}{k!} \cdot (a_x-a_y)^k\\
+      \end{align*}
+
+    \Aufgabe 2
+
+      Parameter an Tag 1: $\left(n=1\right)=\alpha$\\
+      $n$ Tage $\rightarrow$ Parameter $=n\cdot\alpha$\\
+      Somit ist die Wahrscheinlichkeit\\
+      $\frac{e^{-\left(\alpha\cdot n\right)}}{k!}\cdot \left(\alpha\cdot n\right)^k$
+
+    \Aufgabe 3
+
+      \begin{enumerate}
+        \item Eine gute Abschätzung für $x_n$ ist das arithmetsche Mittel, also $\frac{x_1+x_2+\dots+x_n}{n}$, da es gegen p konvergiert.
+        \item Es handelt sich um eine Konfidenzintervallaufgabe.\\
+        Sei $\hat{p}$ die Abschätzung des Chefs.\\
+        $\gamma=95\%$\\
+        Sei $\alpha=1-\gamma=5\%$\\
+        Nach der einfachen Approximation durch die Normalverteilung ist das Konfidenzintervall\\
+        \begin{equation*}
+          \left[ \hat{p} -\left(z_1-\frac{\alpha}{2}\right)\cdot \sqrt{\frac{\hat p \cdot \left(1-\hat{p}\right)}{n}}\quad ,\quad \hat p + \left(z_1-\frac{\alpha}{2}\right)\cdot \sqrt{\frac{\hat p \cdot \left(1-\hat{p}\right)}{n}} \right]
+        \end{equation*}
+        Die Intervallbreite darf nicht $>0,2$ sein, also gilt\\
+        \begin{align*}
+          2 \left(z_1-\frac{\alpha}{2}\right)\cdot \sqrt{\frac{\hat p \cdot \left(1-\hat{p}\right)}{n}} &\leq 0,2\\
+          \frac{2\left(z_1-\frac{\alpha}{2}\right)}{0,2} &\leq \frac{1}{\sqrt{\frac{\hat p \cdot \left( 1- \hat p \right)}{n}}}\\
+          \left( \frac{2\left(z_1-\frac{\alpha}{2}\right)}{0,2} \right)^2 & \leq \frac{1}{\frac{\hat p \cdot \left( 1- \hat p \right)}{n}}\\
+          n &\geq \left( \frac{2\left(z_1-\frac{\alpha}{2}\right)}{0,2} \right)^2 \cdot \hat p \cdot \left( 1 - \hat p \right)
+        \end{align*}
+      \end{enumerate}
+
+\end{document}

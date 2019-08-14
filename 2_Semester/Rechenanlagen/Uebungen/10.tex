@@ -1,0 +1,100 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+%\usepackage[official]{eurosym}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{xfrac}
+\usepackage{marvosym}
+
+\usepackage{enumerate}
+
+\usepackage{fancyhdr}
+
+\usepackage{tikz}
+
+\usepackage{array}   % for \newcolumntype macro
+\newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
+\newcommand{\Aufgabe}[1]{\section*{Aufgabe #1}}
+\newcommand{\lb}[0]{\ensuremath{\left\lbrace}}
+\newcommand{\rb}[0]{\ensuremath{\right\rbrace}}
+
+
+\pagestyle{fancy}
+
+\fancyhf[HR]{Lukas Vormwald, Noah Mehling, Gregor Seewald}
+\fancyhf[HL]{Übung:Dienstag 12:00}
+
+\author{Lukas Vormwald \and Noah Mehling \and Gregor Seewald}
+\date{Übung: Dienstag 14:00}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\newcommand{\Uebung}[1]{\title{Rechenanlagen\\ Übungsblatt #1}}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+\Uebung{10}
+
+\input{./karnaugh/kvmacros.tex}
+
+\begin{document}
+  \maketitle
+
+  \Aufgabe{10.1}
+
+    \begin{enumerate}[a)]
+      \item
+        \begin{tabular}{|c|c|c|c||c|c|c|c|c|c|c|}
+          \hline
+          $a_0$&$a_1$&$a_2$&$a_3$&$l_0$&$l_1$&$l_2$&$l_3$&$h_0$&$h_1$&$h_2$\\
+          \hline\hline
+          0&0&0&0&0&0&0&1&0&1&0\\\hline
+          0&0&0&1&1&0&0&0&1&0&0\\\hline
+          0&0&1&0&1&0&0&0&0&0&0\\\hline
+          0&0&1&1&1&0&0&0&0&0&1\\\hline
+          0&1&0&0&0&1&0&0&1&0&0\\\hline
+          0&1&0&1&0&1&0&0&0&1&0\\\hline
+          0&1&1&0&0&1&0&0&0&0&1\\\hline
+          0&1&1&1&0&0&1&0&1&0&0\\\hline
+          1&0&0&0&0&0&1&0&0&1&0\\\hline
+          1&0&0&1&0&0&1&0&0&0&1\\\hline
+          1&0&1&0&0&0&0&1&1&0&0\\\hline
+          1&0&1&1&0&0&0&1&0&0&1\\\hline
+        \end{tabular}
+        \begin{align*}
+          l_0&=\overline{a_0a_1a_2}a_3\vee\overline{a_0a_1}a_2\bar{a_3}\vee\overline{a_0a_1}a_2a_3\\
+          l_1&=\bar{a_0}a_1\overline{a_2a_3}\vee\bar{a_0}a_1\bar{a_2}a_3\vee\bar{a_0}a_1a_2\bar{a_3}\\
+          l_2&=\bar{a_0}a_1a_2a_3\vee a_0\overline{a_1a_2a_3}\vee a_0\overline{a_1a_2}a_3\\
+          l_3&=\overline{a_0a_1a_2a_3}\vee a_0\bar{a_1}a_2\bar{a_3}\vee a_0\bar{a_1}a_2a_3\\
+          h_0&=\overline{a_01_1a_2}a_3\vee \bar{a_0}a_1\overline{a_2a_3}\vee\bar{a_0}a_1a_2a_3\vee a_0\bar{a_1}a_2\bar{a_3}\\
+          h_1&=\overline{a_0a_1a_2a_3}\vee\overline{a_0a_1}a_2\bar{a_3}\vee\bar{a_0}a_1\bar{a_2}\bar{a_3}\vee a_0\overline{a_1a_2a_3}\\
+          h_2&=\overline{a_0a_1}a_2a_3\vee\bar{a_0}a_1a_2\bar{a_3}\vee a_0\overline{a_1a_2}a_3\vee a_0\bar{a_1}a_2a_3\\
+        \end{align*}
+        \newpage
+      \item Die Belegungen für  $a_0a_1=1$ sind redundant, da diese keine Tasten repräsentieren.\\
+        \kvnoindex
+        \karnaughmap{4}{$l_0(a_0a_1a_2a_3)$:}{{$a_2$}{$a_0$}{$a_3$}{$a_1$}}{{ }{ }1{ }{ }*{ }*1{ }1{ }{ }*{ }*}{} $\Rightarrow l_0=\overline{a_0a_1}a_2\vee\overline{a_0a_1a_2}a_3$\\
+        \karnaughmap{4}{$l_1(a_0a_1a_2a_3)$:}{{$a_2$}{$a_0$}{$a_3$}{$a_1$}}{{ }1{ }1{ }*{ }*{ }1{ }{ }{ }*{ }*}{} $\Rightarrow l_1=a_1\bar{a_2}\vee a_1a_2\bar{a_3}$\\
+        \karnaughmap{4}{$l_2(a_0a_1a_2a_3)$:}{{$a_2$}{$a_0$}{$a_3$}{$a_1$}}{{ }{ }{ }{ }1*1*{ }{ }{ }1{ }*{ }*}{} $\Rightarrow l_2=a_0\bar{a_2}\vee a_1a_2a_3$\\
+        \karnaughmap{4}{$l_3(a_0a_1a_2a_3)$}{{$a_2$}{$a_0$}{$a_3$}{$a_1$}}{1{ }{ }{ }{ }*{ }*{ }{ }{ }{ }1*1*}{} $\Rightarrow l_3=a_0a_2\vee\overline{a_0a_1a_2a_3}$\\
+        \karnaughmap{4}{$h_0(a_0a_1a_2a_3)$}{{$a_2$}{$a_0$}{$a_3$}{$a_1$}}{{ }11{ }{ }*{ }*{ }{ }{ }11*{ }*}{} $\Rightarrow h_0=a_0a_2\bar{a_3}\vee a_1a_2a_3 \vee a_1\overline{a_2a_3}\vee\overline{a_0a_1a_2a_3}$\\
+        \karnaughmap{4}{$h_1(a_0a_1a_2a_3)$}{{$a_2$}{$a_0$}{$a_3$}{$a_1$}}{1{ }{ }11*{ }*1{ }{ }{ }{ }*{ }*}{} $\Rightarrow h_1=a_0\overline{a_2a_3}\vee a_1a_3\bar{a_2}\vee \overline{a_0a_1a_3}$\\
+        \karnaughmap{4}{$h_2(a_0a_1a_2a_3)$}{{$a_2$}{$a_0$}{$a_3$}{$a_1$}}{{ }{ }{ }{ }{ }*1*{ }11{ }{ }*1*}{} $\Rightarrow h_2=a_0a_3\vee a_1a_2\bar{a_3}\vee \overline{a_0a_1}a_2a_3$
+    \end{enumerate}
+
+\end{document}

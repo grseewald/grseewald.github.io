@@ -1,0 +1,11 @@
+# Fdb version 3
+["pdflatex"] 1565081535 "Test.tex" "Test.pdf" "Test" 1565081535
+  "/usr/share/texmf-dist/web2c/texmf.cnf" 1557554374 33301 a3134070eacafb10b1f371612ce2650d ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1563879375 7979416 15772ff9c9c62d24c5f080b9bf94ae14 ""
+  "Test.aux" 1565081535 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
+  "Test.tex" 1565081525 153 67af4a0e16193d822260f2588bc63521 ""
+  "exercise.cls" 1562888165 0 d41d8cd98f00b204e9800998ecf8427e ""
+  (generated)
+  "Test.pdf"
+  "Test.aux"
+  "Test.log"

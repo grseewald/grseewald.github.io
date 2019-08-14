@@ -1,0 +1,19 @@
+# Fdb version 3
+["pdflatex"] 1565803961 "19_08_14.tex" "19_08_14.pdf" "19_08_14" 1565803961
+  "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1557554374 3332 103109f5612ad95229751940c61aada0 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1557554374 1324 c910af8c371558dc20f2d7822f66fe64 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1557554374 1288 655e228510b4c2a1abe905c368440826 ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1557554374 32080 340ef9bf63678554ee606688e7b5339d ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1557554374 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/share/texmf-dist/tex/latex/base/article.cls" 1557554374 19933 3097d1b31d3c45dc957096f554529032 ""
+  "/usr/share/texmf-dist/tex/latex/base/inputenc.sty" 1557554374 5052 b64c57f4a38aae0d2745f8298fa50814 ""
+  "/usr/share/texmf-dist/tex/latex/base/size10.clo" 1557554374 8294 6d6e23d5169c0d89d173f6c7e08a005a ""
+  "/usr/share/texmf-dist/web2c/texmf.cnf" 1557554374 33301 a3134070eacafb10b1f371612ce2650d ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1563879422 3233970 ab845fc2b5afa9d5e4a65f288842af78 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1563879375 7979416 15772ff9c9c62d24c5f080b9bf94ae14 ""
+  "19_08_14.aux" 1565803961 114 1d137af4a90c7b0d6e612fa3d85fcade "pdflatex"
+  "19_08_14.tex" 1565803961 120 29cee6c72d121db7ba4b16fab9698df7 ""
+  (generated)
+  "19_08_14.pdf"
+  "19_08_14.log"
+  "19_08_14.aux"
